@@ -1,0 +1,6357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align:baseline
+    }
+
+  a {
+        color:inherit
+    }
+
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        display:block
+    }
+
+    body {
+        line-height:1
+    }
+
+    blockquote, q {
+        quotes:none
+    }
+
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: '';
+        content:none
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing:0
+    }
+
+    html {
+        font-size: 14px;
+        line-height:1.5
+    }
+
+    @media screen and (max-width: 950px) {
+        html {
+            overflow-x:hidden
+        }
+    }
+
+    body {
+        position: relative;  #0E86D4
+        display: block;
+        min-width: 320px;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        color: #3e3e3e;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height:1.5
+    }
+
+    @media screen and (max-width: 950px) {
+        body {
+            overflow-x:hidden
+        }
+    }
+
+    * {
+        box-sizing:border-box
+    }
+
+    * :focus {
+        outline:0
+    }
+
+    #wrapper {
+        width: 100%;
+        overflow:hidden
+    }
+
+    #header {
+        position: relative;
+        z-index:9001
+    }
+
+    .width-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 3em;
+        box-sizing:border-box
+    }
+
+    @media screen and (max-width: 1000px) {
+        .width-container {
+            padding:0 2em
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .width-container {
+            padding:0 1em
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height:auto
+    }
+
+    section {
+        padding:4em 0
+    }
+
+    @media screen and (max-width: 680px) {
+        section {
+            padding:4em 0
+        }
+    }
+
+    .main-content-wrapper section:last-of-type {
+        padding-bottom:8em
+    }
+
+    @media screen and (max-width: 680px) {
+        .main-content-wrapper section:last-of-type {
+            padding-bottom:4em
+        }
+    }
+
+    .content-container h1, .content-container h2, .content-container h3, .content-container h4, .content-container h5, .content-container h6 {
+        margin: 0;
+        margin-bottom: 1em;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        text-transform:uppercase
+    }
+
+    .content-container h1 {
+        font-size: 2.857em;
+        line-height:.875
+    }
+
+    .content-container h2 {
+        font-size: 2em;
+        line-height:.875
+    }
+
+    .content-container h3 {
+        font-size: 1.357em;
+        line-height: 1.25;
+        font-weight: 900;
+        color:#02813f
+    }
+
+    .content-container h4, .content-container h5, .content-container h6 {
+        font-size: 1.285em;
+        line-height: 1.25;
+        font-weight: 900;
+        color:#fbaf17
+    }
+
+    .content-container blockquote, .content-container q {
+        page-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        break-inside: avoid;
+        position: relative;
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 2em;
+        line-height: 1.25;
+        color: #fbaf17;
+        font-style: italic;
+        padding: 1.5em 0;
+        margin-left:-6rem
+    }
+
+    @media screen and (max-width: 1100px) {
+        .content-container blockquote, .content-container q {
+            margin-left:-3rem
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .content-container blockquote, .content-container q {
+            margin-left:0
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .content-container blockquote, .content-container q {
+            font-size:1.5em
+        }
+    }
+
+    .content-container blockquote::before, .content-container q::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 1.5em;
+        left: -4rem;
+        width: 1.5em;
+        height: 1.5em;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/arrow-right.svg');
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size:contain
+    }
+
+    @media screen and (max-width: 1100px) {
+        .content-container blockquote::before, .content-container q::before {
+            background-position: center right;
+            left: -2rem;
+            width: 2rem;
+            height:1.5em
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .content-container blockquote::before, .content-container q::before {
+            display:none
+        }
+    }
+
+    .content-container p {
+        margin: 0;
+        margin-bottom: 1.25em;
+        font-size: 1em;
+        line-height:1.5em
+    }
+
+    .content-container strong, .content-container b {
+        font-weight:700
+    }
+
+    .content-container em {
+        font-style:italic
+    }
+
+    .content-container small {
+        font-size:.75em
+    }
+
+    .content-container a {
+        font-weight: 700;
+        border-bottom: 1px dotted;
+        text-decoration:none
+    }
+
+    .content-container a:hover {
+        border-bottom:1px solid
+    }
+
+    .content-container ul, .content-container ol {
+        margin-bottom: 1.5em;
+        padding-left: 1.5em;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style:none
+    }
+
+    .content-container ul li, .content-container ol li {
+        position: relative;
+        padding-left: 1.25em;
+        page-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        break-inside: avoid-column;
+        font-size: 1.1428em;
+        line-height:1.3125
+    }
+
+    .content-container ul li::before, .content-container ol li::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        top: .75em;
+        width: .5em;
+        height: .5em;
+        border-radius: 2em;
+        background-color: #02813f;
+        transform:translate(0, -50%)
+    }
+
+    .content-container img:not([class * =eapps-]) {
+        max-width: calc(100% + 6rem);
+        width: calc(100% + 8em);
+        margin-left:-6rem
+    }
+
+    @media screen and (max-width: 1100px) {
+        .content-container img:not([class * =eapps-]) {
+            margin-left: -3rem;
+            max-width:calc(100% + 3rem)
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .content-container img:not([class * =eapps-]) {
+            margin-left: 0;
+            max-width:100%
+        }
+    }
+
+    .content-container .btn, .content-container .btn-icon, .content-container .btn-icon-lg {
+        border-bottom:0
+    }
+
+    .content-container .btn:hover, .content-container .btn-icon:hover, .content-container .btn-icon-lg:hover {
+        border-bottom:0
+    }
+
+    .content-container .no-margin-bottom {
+        margin-bottom:0
+    }
+
+    .content-container table {
+        width: 100%;
+        border: 1px solid #055C9D;
+        margin-bottom:1.5em
+    }
+
+    .content-container table thead {
+        background-color: #eaeaea;
+        border-bottom: 1px solid #ddd;
+        font-weight:700
+    }
+
+    .content-container table th {
+        vertical-align:middle
+    }
+
+    .content-container table th, .content-container table td {
+        padding:1em
+    }
+
+    .content-container table tbody tr:nth-of-type(2n) {
+        background-color:#f1f1f1
+    }
+
+    .section-title {
+        margin-bottom: .4375em;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 2.857em;
+        line-height: .875;
+        text-transform:uppercase
+    }
+
+    @media screen and (max-width: 650px) {
+        .section-title {
+            font-size:2.125em
+        }
+    }
+
+    .section-subtitle {
+        margin-bottom: .8235em;
+        color: #68BBE3;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 900;
+        font-size: 1.285em;
+        line-height: 1.25;
+        text-transform:uppercase
+    }
+
+    .btn {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        padding: 1em;
+        padding-right: 2.5em;
+        border-radius: 2px;
+        color: #fff;
+        background-color: #68BBE3;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow:0 3px 5px 0 rgba(0, 0, 0, 0.15)
+    }
+
+    .btn::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 1em;
+        content: '\f105';
+        font-family: 'FontAwesome';
+        transform:translate(-50%, -50%)
+    }
+
+    .btn-outline {
+        padding-left: 0;
+        background-color: transparent;
+        box-shadow:none
+    }
+
+    .page-wrapper {
+        background-color:#fff
+    }
+
+    @media screen and (max-width: 950px) {
+        .page-wrapper {
+            transform: translate3d(0, 0, 0);
+            transition:transform 600ms cubic-bezier(0.19, 1, 0.22, 1)
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .page-wrapper.nav-open {
+            transform:translate3d(-220px, 0, 0)
+        }
+    }
+
+    .description-wrapper {
+        display: block;
+        text-decoration:none
+    }
+
+    .description-wrapper .description-title {
+        color: #055C9D;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 1.357em;
+        font-weight: 900;
+        margin-bottom: .5em;
+        text-transform: uppercase;
+        line-height: 1;
+        transition:color 300ms
+    }
+
+    .description-wrapper .description-title strong {
+        font-weight:900
+    }
+
+    .description-wrapper .description-content {
+        color: #3e3e3e;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 1em;
+        line-height:1.5
+    }
+
+    a.description-wrapper:hover .description-title {
+        color:#0cc3fe
+    }
+
+    .testimonial-wrapper .testimonial-inner {
+        position: relative;
+        padding-top: 6em;
+        padding-bottom: 2rem;
+        text-align:right
+    }
+
+    .testimonial-wrapper .testimonial-inner::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 5em;
+        height: 5em;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/quotes.svg');
+        background-position: top;
+        background-size: contain;
+        background-repeat:no-repeat
+    }
+
+    .testimonial-wrapper .testimonial-inner::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 10em;
+        height: 5em;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/stars.svg');
+        background-position: bottom;
+        background-size: contain;
+        background-repeat:no-repeat
+    }
+
+    .testimonial-wrapper .testimonial-inner.small-quote {
+        padding-top:3em
+    }
+
+    .testimonial-wrapper .testimonial-inner.small-quote::before {
+        width: 2em;
+        height:2em
+    }
+
+    .testimonial-wrapper .testimonial-inner.small-quote::after {
+        height:2em
+    }
+
+    .testimonial-wrapper .testimonial-inner.small-quote .testimonial-content {
+        font-size: 1.1428em;
+        color:#0E86D4
+    }
+
+    .testimonial-wrapper .testimonial-content {
+        font-style: italic;
+        line-height: 1.5;
+        text-align:justify
+    }
+
+    .testimonial-wrapper .testimonial-attribution {
+        position: relative;
+        display: inline-block;
+        margin-top: 1em;
+        padding-left: 3.8em;
+        color: #3e3e3e;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.1428em;
+        font-weight: 900;
+        line-height:2.46875
+    }
+
+    .testimonial-wrapper .testimonial-attribution::before {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 0;
+        width: 2.8em;
+        height: 2.8em;
+        transform:translate(0, -50%)
+    }
+
+    .testimonial-wrapper .source-google::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/review-google.png');
+        background-size: contain;
+        background-repeat:no-repeat
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and(min--moz-device-pixel-ratio: 1.5), only screen and(min-device-pixel-ratio: 1.5) {
+        .testimonial-wrapper .source-google::before {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/review-google@2x.png');
+            background-size:contain
+        }
+    }
+
+    .testimonial-wrapper .source-kudzu::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/review-kudzu.png');
+        background-size: contain;
+        background-repeat:no-repeat
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and(min--moz-device-pixel-ratio: 1.5), only screen and(min-device-pixel-ratio: 1.5) {
+        .testimonial-wrapper .source-kudzu::before {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/review-kudzu@2x.png');
+            background-size:contain
+        }
+    } 
+
+    .image-wrapper-circle {
+        position: relative;
+        max-width: 550px;
+        margin:0 auto
+    }
+
+    @media screen and (max-width: 680px) {
+        .image-wrapper-circle {
+            max-width:90%
+        }
+    }
+
+    .image-wrapper-circle::before {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -1em;
+        right: -1em;
+        width: 100%;
+        height: 100%;
+        background: #0E86D4;
+        border-radius: 100%;
+        box-shadow:0 3px 5px 0 rgba(0, 0, 0, 0.15)
+    }
+
+    .image-wrapper-circle .image-wrapper-circle-item {
+        position: relative;
+        z-index: 1;
+        border-radius: 100%;
+        box-shadow:0 3px 5px 0 rgba(0, 0, 0, 0.15)
+    }
+
+    .service-wrapper {
+        position: relative;
+        padding-left: 8em;
+        padding-right:2em
+    }
+
+    @media screen and (max-width: 400px) {
+        .service-wrapper {
+            padding-left:4em
+        }
+    }
+
+    .service-wrapper::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 7em;
+        height: 8em;
+        background-position: top;
+        background-size: contain;
+        background-repeat:no-repeat
+    }
+
+    @media screen and (max-width: 400px) {
+        .service-wrapper::before {
+            width:3em
+        }
+    }
+
+    .service-wrapper + .service-wrapper {
+        margin-top:4em
+    }
+
+    .number-wrapper {
+        position: relative;
+        width: 4.2857em;
+        height: 4.2857em;
+        border-radius: 100%;
+        background-color: #0E86D4;
+        text-align: right;
+        overflow:hidden
+    }
+
+    @media screen and (max-width: 950px) {
+        .number-wrapper {
+            width: 3em;
+            height:3em
+        }
+    }
+
+    .number {
+        position: relative;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 4.2857em;
+        font-weight:700
+    }
+
+    @media screen and (max-width: 950px) {
+        .number {
+            font-size:3em
+        }
+    }
+
+    .icon-commercial::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/icon-commercial.svg')
+    }
+
+    .icon-gutter::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/icon-gutter.svg')
+    }
+
+    .icon-insulation::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/icon-insulation.svg')
+    }
+
+    .icon-repair::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/icon-repair.svg')
+    }
+
+    .icon-roof::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/icon-roof.svg')
+    }
+
+    .icon-siding::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/icon-siding.svg')
+    }
+
+    .icon-window::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/icon-window.svg')
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        padding-top: 2px;
+        color: #fff;
+        text-align: center;
+        box-sizing: border-box;
+        cursor: pointer;
+        z-index:2
+    }
+
+    .play-btn {
+        position: relative;
+        margin: 0 auto;
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 26px;
+        text-align: center;
+        border-radius: 50%;
+        border: .125em solid #fff;
+        cursor: pointer;
+        z-index: 1;
+        box-sizing:border-box
+    }
+
+    .play-btn .fa {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-style: normal;
+        font-size: 1.75em;
+        transform:translate(-40%, -50%)
+    }
+
+    .fitvids-manual {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow:hidden
+    }
+
+    .fitvids-manual iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border:0
+    }
+
+    .fitvids-vertical-manual {
+        position: relative;
+        height:100%
+    }
+
+    .fitvids-vertical-manual iframe {
+        width: 100%;
+        height:100%
+    }
+
+    .media-wrapper {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height:100%
+    }
+
+    .media-wrapper.hidden {
+        z-index:0
+    }
+
+    .content-wrapper {
+        max-width: 50em;
+        margin:0 auto
+    }
+
+    .video-content {
+        position: relative;
+        z-index: 1;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        transition:opacity 300ms
+    }
+
+    .video-content::before {
+        z-index: -1;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        transform:translate(-50%, 0)
+    }
+
+    .video-content.hidden {
+        display: block;
+        opacity: 0;
+        z-index:0
+    }
+
+    .video-content.title-active .play-btn {
+        margin-bottom:2em
+    }
+
+    .video-wrapper {
+        position:relative
+    }
+
+    .video-iframe-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height:100%
+    }
+
+    .video-iframe-wrapper iframe {
+        width: 100%;
+        height:100%
+    }
+
+    .bx-wrapper {
+        position:relative
+    }
+
+    .bx-prev, .bx-next {
+        position: relative;
+        display: block;
+        width: 3em;
+        height: 2em;
+        padding: 2em 1em;
+        margin: 0 auto;
+        text-indent: -9999px;
+        text-decoration: none;
+        visibility: visible;
+        overflow: hidden;
+        z-index:200
+    }
+
+    .bx-prev::before, .bx-next::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 3em;
+        height: 2em;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 1;
+        text-indent: 0;
+        transform: translate(-50%, -50%);
+        transition:opacity 300ms
+    }
+
+    .bx-prev:hover::before, .bx-next:hover::before {
+        opacity:.5
+    }
+
+    .bx-prev::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/arrow-left.svg')
+    }
+
+    .bx-next::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/arrow-right.svg')
+    }
+
+    .column-container {
+        display: flex;
+        margin:0 -2em
+    }
+
+    @media screen and (max-width: 850px) {
+        .column-container {
+            flex-wrap:wrap
+        }
+    }
+
+    .column {
+        flex:0 0 50%
+    }
+
+    @media screen and (max-width: 850px) {
+        .column {
+            flex:0 0 100%
+        }
+    }
+
+    .column-inner {
+        padding:2em
+    }
+
+    .before, .after {
+        content: "";
+        position: absolute;
+        display:block
+    }
+
+    .no-break {
+        page-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        break-inside:avoid
+    }
+
+    .hidden {
+        display:none
+    }
+
+    .text-center {
+        text-align:center
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip:rect(0, 0, 0, 0)
+    }
+
+    .background-center {
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat
+    }
+
+    .social-col .social-networks, .social-col-square .social-networks, .social-col-circle .social-networks {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        list-style:none
+    }
+
+    .social-col .social-link, .social-col-square .social-link, .social-col-circle .social-link {
+        position: relative;
+        width: 2.5em;
+        height: 2.5em;
+        display: inline-block;
+        text-indent: -9999px;
+        text-decoration: none;
+        transition:all 300ms
+    }
+
+    .social-col .social-link::before, .social-col-square .social-link::before, .social-col-circle .social-link::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 50%;
+        font-family: 'FontAwesome';
+        font-size: 1.125em;
+        text-indent: 0;
+        transform: translate(-50%, -50%);
+        transition:all 300ms
+    }
+
+    .social-col .facebook::before, .social-col-square .facebook::before, .social-col-circle .facebook::before {
+        content: "\f09a"
+    }
+
+    .social-col .twitter::before, .social-col-square .twitter::before, .social-col-circle .twitter::before {
+        content: "\f099"
+    }
+
+    .social-col .google-plus::before, .social-col-square .google-plus::before, .social-col-circle .google-plus::before {
+        content: "\f0d5"
+    }
+
+    .social-col .youtube::before, .social-col-square .youtube::before, .social-col-circle .youtube::before {
+        content: "\f16a"
+    }
+
+    .social-col .linkedin::before, .social-col-square .linkedin::before, .social-col-circle .linkedin::before {
+        content: "\f0e1"
+    }
+
+    .social-col .pinterest::before, .social-col-square .pinterest::before, .social-col-circle .pinterest::before {
+        content: "\f231"
+    }
+
+    .social-col .instagram::before, .social-col-square .instagram::before, .social-col-circle .instagram::before {
+        content: "\f16d"
+    }
+
+    .social-col .houzz::before, .social-col-square .houzz::before, .social-col-circle .houzz::before {
+        content: "\f27c"
+    }
+
+    .social-col-square .social-link::before, .social-col-circle .social-link::before {
+        color:#fff
+    }
+
+    .social-col-square .social-link:hover::before, .social-col-circle .social-link:hover::before {
+        color:#fff
+    }
+
+    .social-col-square .facebook, .social-col-circle .facebook {
+        background-color:#3b5998
+    }
+
+    .social-col-square .facebook:hover, .social-col-circle .facebook:hover {
+        background-color:#2d4373
+    }
+
+    .social-col-square .twitter, .social-col-circle .twitter {
+        background-color:#1da1f2
+    }
+
+    .social-col-square .twitter:hover, .social-col-circle .twitter:hover {
+        background-color:#0c85d0
+    }
+
+    .social-col-square .google-plus, .social-col-circle .google-plus {
+        background-color:#ea4335
+    }
+
+    .social-col-square .google-plus:hover, .social-col-circle .google-plus:hover {
+        background-color:#d62516
+    }
+
+    .social-col-square .youtube, .social-col-circle .youtube {
+        background-color:#ea4335
+    }
+
+    .social-col-square .youtube:hover, .social-col-circle .youtube:hover {
+        background-color:#d62516
+    }
+
+    .social-col-square .linkedin, .social-col-circle .linkedin {
+        background-color:#0077b5
+    }
+
+    .social-col-square .linkedin:hover, .social-col-circle .linkedin:hover {
+        background-color:#005582
+    }
+
+    .social-col-square .pinterest, .social-col-circle .pinterest {
+        background-color:#bd081c
+    }
+
+    .social-col-square .pinterest:hover, .social-col-circle .pinterest:hover {
+        background-color:#8c0615
+    }
+
+    .social-col-square .instagram, .social-col-circle .instagram {
+        background-color:#8e00b9
+    }
+
+    .social-col-square .instagram:hover, .social-col-circle .instagram:hover {
+        background-color:#670086
+    }
+
+    .social-col-square .houzz, .social-col-circle .houzz {
+        background-color:#7ac143
+    }
+
+    .social-col-square .houzz:hover, .social-col-circle .houzz:hover {
+        background-color:#629d34
+    }
+
+    .social-col-circle .social-link {
+        border-radius: 50%
+    }
+
+    .dynamix-form input[type="text"], .dynamix-form input[type="tel"], .dynamix-form input[type="tel"]:invalid, .dynamix-form input[type="email"], .dynamix-form input[type="email"]:invalid {
+        box-shadow: none;
+        background-color: transparent;
+        border: 0;
+        outline: 0
+    }
+
+    .dynamix-form input[type="text"]:focus, .dynamix-form input[type="tel"]:focus, .dynamix-form input[type="tel"]:invalid:focus, .dynamix-form input[type="email"]:focus, .dynamix-form input[type="email"]:invalid:focus {
+        outline: 0
+    }
+
+    .dynamix-form input[type="text"]::-ms-clear, .dynamix-form input[type="tel"]::-ms-clear, .dynamix-form input[type="tel"]:invalid::-ms-clear, .dynamix-form input[type="email"]::-ms-clear, .dynamix-form input[type="email"]:invalid::-ms-clear {
+        width: 0;
+        height: 0
+    }
+
+    .dynamix-form input[type="text"]::-webkit-contacts-auto-fill-button, .dynamix-form input[type="tel"]::-webkit-contacts-auto-fill-button, .dynamix-form input[type="tel"]:invalid::-webkit-contacts-auto-fill-button, .dynamix-form input[type="email"]::-webkit-contacts-auto-fill-button, .dynamix-form input[type="email"]:invalid::-webkit-contacts-auto-fill-button {
+        visibility: hidden;
+        display: none !important;
+        pointer-events: none;
+        position: absolute;
+        right: 0
+    }
+
+    .dynamix-form input[type="text"] ~ label, .dynamix-form input[type="tel"] ~ label, .dynamix-form input[type="tel"]:invalid ~ label, .dynamix-form input[type="email"] ~ label, .dynamix-form input[type="email"]:invalid ~ label {
+        display:none
+    }
+
+    .dynamix-form .form-title {
+        display: none
+    }
+
+    .dynamix-form input[type="radio"], .dynamix-form input[type="checkbox"] {
+        display:none
+    }
+
+    .dynamix-form select {
+        border: 0;
+        outline: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance:none
+    }
+
+    .dynamix-form select::-ms-expand {
+        display:none
+    }
+
+    .dynamix-form select:focus {
+        outline:0
+    }
+
+    .dynamix-form textarea {
+        overflow: auto;
+        resize: none;
+        border: 0;
+        outline: 0;
+        font-family: 'Work Sans', sans-serif
+    }
+
+    .dynamix-form textarea:focus {
+        outline:0
+    }
+
+    .dynamix-form textarea ~ label {
+        display: none
+    }
+
+    .dynamix-form input[type="submit"], .dynamix-form button {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        background-image: none;
+        border: 0;
+        outline: 0;
+        cursor: pointer
+    }
+
+    .dynamix-form input[type="submit"]:focus, .dynamix-form button:focus {
+        outline:0
+    }
+
+    .dynamix-form {
+        margin-bottom:-1.5em
+    }
+
+    .dynamix-form .form-block {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: calc(100% + 3em);
+        margin-left: -1.5em
+    }
+
+    .dynamix-form [class * ="form-line-"] {
+        position: relative;
+        flex: 1 0 100%;
+        max-width: 100%;
+        padding: 0 1.5em;
+        margin-bottom: 1.5em;
+        box-sizing: border-box
+    }
+
+    .dynamix-form [class * ="form-line-"][class * ="-half"] {
+        flex: 1 0 50%;
+        max-width:50%
+    }
+
+    @media screen and (max-width: 860px) {
+        .dynamix-form [class * ="form-line-"][class * ="-half"] {
+            flex: 1 0 100%;
+            max-width: 100%
+        }
+    }
+
+    .dynamix-form [class * ="form-line-"][class * ="-third"] {
+        flex: 1 0 33.333%;
+        max-width:33.333%
+    }
+
+    @media screen and (max-width: 860px) {
+        .dynamix-form [class * ="form-line-"][class * ="-third"] {
+            flex: 1 0 100%;
+            max-width: 100%
+        }
+    }
+
+    .dynamix-form [class * ="form-line-"][class * ="-two-thirds"] {
+        flex: 1 0 66.666%;
+        max-width:66.666%
+    }
+
+    @media screen and (max-width: 860px) {
+        .dynamix-form [class * ="form-line-"][class * ="-two-thirds"] {
+            flex: 1 0 100%;
+            max-width: 100%
+        }
+    }
+
+    .dynamix-form [class * ="form-line-"][class * ="none"] {
+        margin: 0;
+        display:none
+    }
+
+    .dynamix-form.compact-form {
+        margin-bottom:-0.75em
+    }
+
+    .dynamix-form.compact-form .form-block {
+        width: calc(100% + .75em);
+        margin-left: -0.375em
+    }
+
+    .dynamix-form.compact-form [class * ="form-line-"] {
+        padding: 0 .375em;
+        margin-bottom: .75em
+    }
+
+    .dynamix-form.compact-form [class * ="form-line-"] [class * ="form-line-"] {
+        margin-bottom:0
+    }
+
+    @media screen and (max-width: 860px) {
+        .dynamix-form.compact-form [class * ="form-line-"] {
+            margin-bottom: .375em
+        }
+    }
+
+    .dynamix-form input[type="text"], .dynamix-form input[type="tel"], .dynamix-form input[type="tel"]:invalid, .dynamix-form input[type="email"], .dynamix-form input[type="email"]:invalid, .dynamix-form textarea {
+        display: block;
+        width: 100%;
+        padding: 1em;
+        font-size: 1em;
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-sizing:border-box
+    }
+
+    .dynamix-form textarea {
+        min-height: 12em;
+        border-radius: 2px;
+        position: absolute;
+        top: 0;
+        left: 1.5em;
+        height: 100%;
+        width:calc(100% - 3em)
+    }
+
+    @media screen and (max-width: 860px) {
+        .dynamix-form textarea {
+            position: static;
+            width: 100%
+        }
+    }
+
+    .dynamix-form input[type="submit"], .dynamix-form button {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        padding: 1em;
+        padding-right: 2.5em;
+        border-radius: 2px;
+        color: #fff;
+        background-color: #05888e;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15)
+    }
+
+    .dynamix-form input[type="submit"]::after, .dynamix-form button::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 1em;
+        content: '\f105';
+        font-family: 'FontAwesome';
+        transform:translate(-50%, -50%)
+    }
+
+    .dynamix-form .select-label {
+        position: relative;
+        display:block
+    }
+
+    .dynamix-form .select-label::before {
+        content: "";
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 50%;
+        width: 3em;
+        color: #3e3e3e;
+        font-family: 'FontAwesome';
+        font-weight: 400;
+        text-align: center;
+        content: '\f078';
+        pointer-events: none;
+        transform:translate(0, -50%)
+    }
+
+    .dynamix-form .select-label::after {
+        content: "";
+        position: absolute;
+        display: block;
+        right: 3em;
+        top: 20%;
+        width: 1px;
+        height: 60%;
+        background-color:#3e3e3e
+    }
+
+    .dynamix-form select {
+        display: block;
+        width: 100%;
+        padding: 1em;
+        font-size: 1em;
+        border: 1px solid rgba(62, 62, 62, 0.1);
+        border-radius: 2px;
+        cursor: pointer
+    }
+
+    .dynamix-form input[type="radio"] ~ label, .dynamix-form input[type="checkbox"] ~ label {
+        position: relative;
+        padding-left: 1.25em;
+        cursor: pointer
+    }
+
+    .dynamix-form input[type="radio"] ~ label::before, .dynamix-form input[type="checkbox"] ~ label::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 50%;
+        width: .75em;
+        height: .75em;
+        margin-top: -0.375em;
+        box-sizing: border-box;
+        border: 1px solid #3e3e3e;
+        box-shadow: inset 0 0 0 .15em #fff, inset 0 0 0 .375em #fff;
+        transition: box-shadow 325ms ease
+    }
+
+    .dynamix-form input[type="radio"]:checked ~ label::before, .dynamix-form input[type="checkbox"]:checked ~ label::before {
+        background-color: #3e3e3e;
+        box-shadow: inset 0 0 0 .15em #fff, inset 0 0 0 .375em #3e3e3e
+    }
+
+    .dynamix-form input[type="radio"] ~ label::before {
+        border-radius:50%
+    }
+
+    .dynamix-form.compact-form .embellished-input::before {
+        right:1.5em
+    }
+
+    .dynamix-form .embellished-input::before {
+        content: "";
+        position: absolute;
+        display: block;
+        z-index: 10;
+        right: 2.25em;
+        top: 50%;
+        width: 1em;
+        height: 1em;
+        color: #3e3e3e;
+        font-family: 'FontAwesome';
+        line-height: 1;
+        pointer-events: none;
+        transform:translate(0, -50%)
+    }
+
+    .dynamix-form .embellished-input.name::before {
+        content: '\f007'
+    }
+
+    .dynamix-form .embellished-input.email::before {
+        content: '\f0e0'
+    }
+
+    .dynamix-form .embellished-input.phone::before {
+        content: '\f095'
+    }
+
+    .dynamix-form .embellished-input.search::before {
+        content: '\f002'
+    }
+
+    .dynamix-form .embellished-input.map::before {
+        content: '\f041'
+    }
+
+    .form-btn-right button {
+        display: block;
+        margin: 0 auto;
+        margin-right:0
+    }
+
+    @media screen and (max-width: 500px) {
+        .form-btn-right button {
+            margin-right: inherit;
+            margin-left:0
+        }
+    }
+
+    .textarea-rel textarea {
+        position: relative;
+        left: 0;
+        width:100%
+    }
+
+    .form-singleline .form-line-full {
+        flex: 1 0 auto;
+        padding-right:0
+    }
+
+    @media screen and (max-width: 550px) {
+        .form-singleline .form-line-full {
+            flex: 1 0 100%;
+            padding-right:1.5em
+        }
+    }
+
+    .form-singleline .form-line-full input {
+        height: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius:0
+    }
+
+    @media screen and (max-width: 550px) {
+        .form-singleline .form-line-full input {
+            border-top-right-radius: 2px;
+            border-bottom-right-radius:2px
+        }
+    }
+
+    .form-singleline .button-line {
+        padding-left: 0;
+        padding-right:1.5em
+    }
+
+    @media screen and (max-width: 550px) {
+        .form-singleline .button-line {
+            padding-left: 1.5em;
+            padding-right:1.5em
+        }
+    }
+
+    .form-singleline button {
+        height: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius:0
+    }
+
+    @media screen and (max-width: 550px) {
+        .form-singleline button {
+            border-top-left-radius: 2px;
+            border-bottom-left-radius:2px
+        }
+    }
+
+    .recaptchaform .google-policy {
+        padding: 0;
+        margin: auto;
+        font-size:12px
+    }
+
+    .recaptchaform .google-policy a {
+        font-weight:bold
+    }
+
+    .recaptchaform .grecaptcha-badge {
+        visibility:hidden
+    }
+
+    .recaptchaform.hero-form .google-policy, .recaptchaform.prefooter-form .google-policy {
+        color:#fff
+    }
+
+    .recaptchaform.main-contact-form .google-policy {
+        color:#05888e
+    }
+
+    .inview-fade {
+        opacity: 0;
+        transition:opacity 800ms 200ms
+    }
+
+    .inview-fade.inview {
+        opacity:1 !important
+    }
+
+    .inview-fade-up {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+        transition:opacity 600ms 200ms, transform 1200ms 200ms cubic-bezier(0.19, 1, 0.22, 1)
+    }
+
+    .inview-fade-up.inview {
+        opacity: 1 !important;
+        transform:translate3d(0, 0, 0) !important
+    }
+
+    .inview-fade-scale-in {
+        opacity: 0;
+        transform: scale(0.5);
+        transition:opacity 600ms 200ms, transform 1200ms 200ms cubic-bezier(0.19, 1, 0.22, 1)
+    }
+
+    .inview-fade-scale-in.inview {
+        opacity: 1 !important;
+        transform:scale(1) !important
+    }
+
+    .inview-cascade-fade > * {
+        opacity: 0;
+        transition:opacity 800ms 200ms
+    }
+
+    .inview-cascade-fade.inview > * {
+        opacity:1 !important
+    }
+
+    .inview-cascade-fade-up > * {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+        transition:opacity 600ms 200ms, transform 1200ms 200ms cubic-bezier(0.19, 1, 0.22, 1)
+    }
+
+    .inview-cascade-fade-up.inview > * {
+        opacity: 1 !important;
+        transform:translate3d(0, 0, 0) !important
+    }
+
+    .footer {
+        position: relative;
+        padding: 2em 0;
+        background-color: #313131;
+        color:#fff
+    }
+
+    .footer .width-container {
+        display: flex;
+        align-items:center
+    }
+
+    @media screen and (max-width: 900px) {
+        .footer .width-container {
+            flex-wrap:wrap
+        }
+    }
+
+    .footer .copyright-col {
+        flex-shrink: 0;
+        flex-basis: 35%;
+        font-size: 1em;
+        text-transform:uppercase
+    }
+
+    @media screen and (max-width: 1000px) {
+        .footer .copyright-col {
+            flex-basis:25%
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .footer .copyright-col {
+            flex: 1 0 100%;
+            text-align:center
+        }
+    }
+
+    .footer .social-col, .footer .social-col-square, .footer .social-col-circle {
+        padding: 0 2em;
+        flex-grow: 1;
+        flex-shrink: 0;
+        text-align:center
+    }
+
+    @media screen and (max-width: 900px) {
+        .footer .social-col, .footer .social-col-square, .footer .social-col-circle {
+            flex: 1 0 100%;
+            margin: 1em 0;
+            padding:0
+        }
+    }
+
+    .footer .social-link {
+        font-size:1.25em
+    }
+
+    .footer .social-link:hover::before {
+        color:#ececec
+    }
+
+    .footer .dynamix-logo-col {
+        flex-shrink: 0;
+        flex-basis:35%
+    }
+
+    @media screen and (max-width: 1000px) {
+        .footer .dynamix-logo-col {
+            flex-basis:25%
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .footer .dynamix-logo-col {
+            flex:1 0 100%
+        }
+    }
+
+    .footer .dynamix-logo {
+        display: block;
+        width: 97px;
+        height: 24px;
+        margin-left: auto;
+        overflow: hidden;
+        text-indent: -9999px;
+        font-size: 0;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/dynamix-logo-white.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .75;
+        transition:opacity 325ms cubic-bezier(0.19, 1, 0.22, 1)
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and(min--moz-device-pixel-ratio: 1.5), only screen and(min-device-pixel-ratio: 1.5) {
+        .footer .dynamix-logo {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/dynamix-logo-white@2x.png');
+            background-size:contain
+        }
+    }
+
+    .footer .dynamix-logo:hover {
+        opacity:1
+    }
+
+    @media screen and (max-width: 900px) {
+        .footer .dynamix-logo {
+            margin:0 auto
+        }
+    }
+
+    .footer .nav-list-primary {
+        justify-content: flex-start !important;
+        margin:0 -1em
+    }
+
+    .footer .nav-link-primary:hover {
+        text-decoration:underline !important
+    }
+
+    .footer .link-text {
+        color:#fff !important
+    }
+
+    .nav-handle {
+        position: absolute;
+        top: 50%;
+        right: 1.375em;
+        z-index: 99999;
+        display: none;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        transform:translate(0, -50%)
+    }
+
+    @media screen and (max-width: 950px) {
+        .nav-handle {
+            display:block
+        }
+    }
+
+    .nav-handle .nav-handle-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin-top: -1px;
+        border-radius: 2px;
+        background-color: #88bd9a;
+        transition:background 300ms
+    }
+
+    .nav-handle .nav-handle-inner:before, .nav-handle .nav-handle-inner:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 2px;
+        top: -10px;
+        left: 0;
+        background-color: #88bd9a;
+        transform-origin: center;
+        transform: rotate(0deg);
+        transition:transform 300ms
+    }
+
+    .nav-handle .nav-handle-inner:after {
+        top:10px
+    }
+
+    .nav-open .nav-handle .nav-handle-inner {
+        background-color:transparent
+    }
+
+    .nav-open .nav-handle .nav-handle-inner:before {
+        transform: rotate(45deg);
+        top:0
+    }
+
+    .nav-open .nav-handle .nav-handle-inner:after {
+        top: 0;
+        transform:rotate(-45deg)
+    }
+
+    .nav-overlay {
+        display: none;
+        background-color:rgba(0, 0, 0, 0.45)
+    }
+
+    @media screen and (max-width: 950px) {
+        .nav-overlay {
+            display:block
+        }
+    }
+
+    .nav-open .nav-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: block;
+        width: 100%;
+        height:100%
+    }
+
+    .nav-drawer {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 16.25em;
+        height: 100%;
+        background-color: #f1f1f1;
+        color: #3e3e3e;
+        box-sizing:border-box
+    }
+
+    @media screen and (max-width: 950px) {
+        .nav-drawer {
+            display:block
+        }
+    }
+
+    .nav-drawer .nav-list-primary {
+        margin: 0;
+        padding: 0;
+        list-style:none
+    }
+
+    .nav-drawer .nav-item-primary {
+        padding-left:.625em
+    }
+
+    .nav-drawer .nav-link-primary {
+        position: relative;
+        display: block;
+        padding: 1.25em;
+        padding-left: .9375em;
+        border-left: .3125em solid #0E86D4;
+        font-size: 1em;
+        line-height: 1.25em;
+        color: #0E86D4;
+        text-decoration:none
+    }
+
+    .nav-drawer .nav-link-primary:hover {
+        background-color: #0E86D4;
+        border-left:.3125em solid #0E86D4
+    }
+
+    .nav-drawer .nav-link-primary.active {
+        background-color: #0E86D4;
+        border-left:.3125em solid #0E86D4
+    }
+
+    .nav-drawer .nav-link-primary.active .toggle:after {
+        content: "\f0d8"
+    }
+
+    .nav-drawer .toggle {
+        position: absolute;
+        top: .625em;
+        right: 0;
+        width: 2.5em;
+        height: 100%;
+        text-align:center
+    }
+
+    .nav-drawer .toggle:after {
+        content: "\f0d7";
+        display: inline-block;
+        font-family: 'FontAwesome';
+        color: #3e3e3e;
+        padding:.625em 0
+    }
+
+    .nav-drawer .nav-list-secondary {
+        position: relative;
+        display: none;
+        background-color: #d8d8d8;
+        list-style:none
+    }
+
+    .nav-drawer .nav-list-secondary.open {
+        display:block
+    }
+
+    .nav-drawer .nav-link-secondary {
+        display: block;
+        padding: 1.25em;
+        padding-left: .9375em;
+        border-left: .3125em solid #d8d8d8;
+        text-decoration:none
+    }
+
+    .nav-drawer .nav-link-secondary:hover {
+        background-color: #cbcbcb;
+        border-left:.3125em solid #bebebe
+    }
+
+    .nav-drawer .top-nav {
+        border-top: 1px solid #585858;
+        background-color:#3e3e3e
+    }
+
+    .nav-drawer .top-nav .nav-link-primary {
+        padding: .75em 1.25em;
+        padding-left: .9375em;
+        border-left-color:#585858
+    }
+
+    .nav-drawer .btn-col {
+        padding-top: 1.5em;
+        padding-left: .9375em;
+        border-top:1px solid #ddd
+    }
+
+    .nav-drawer .btn-header {
+        display: flex;
+        max-width: 200px;
+        margin:0 auto
+    }
+
+    .nav-drawer .btn-header + .btn-header {
+        margin-top: 1em;
+        margin-left:auto
+    }
+
+    .nav-drawer .top-item {
+        text-decoration: none;
+        text-align: center;
+        padding:1em
+    }
+
+    .nav-drawer .top-text {
+        color: #02813f;
+        font-size: 1.2857em;
+        font-weight: 300;
+        text-align:center
+    }
+
+    .nav-drawer .top-text strong {
+        display: block;
+        font-weight:900
+    }
+
+    .nav-drawer .nav-tel .link-text {
+        color: #60A3D9;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.7142em;
+        font-weight: 900;
+        letter-spacing:1.2px
+    }
+
+    @media screen and (max-width: 1160px) {
+        .header .navigation, .top-header .navigation, .footer .navigation {
+            font-size:.875em
+        }
+    }
+
+    .header .navigation .nav-item-primary, .top-header .navigation .nav-item-primary, .footer .navigation .nav-item-primary {
+        position:relative
+    }
+
+    .header .navigation .nav-item-primary:hover .nav-list-secondary-container, .top-header .navigation .nav-item-primary:hover .nav-list-secondary-container, .footer .navigation .nav-item-primary:hover .nav-list-secondary-container {
+        display:block
+    }
+
+    .header .navigation .nav-list-primary, .top-header .navigation .nav-list-primary, .footer .navigation .nav-list-primary {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        height: 100%;
+        list-style:none
+    }
+
+    .header .navigation .nav-item-primary, .top-header .navigation .nav-item-primary, .footer .navigation .nav-item-primary {
+        margin-left: 0;
+        margin-right:0
+    }
+
+    .header .navigation .nav-item-primary:hover .nav-list-secondary-container, .top-header .navigation .nav-item-primary:hover .nav-list-secondary-container, .footer .navigation .nav-item-primary:hover .nav-list-secondary-container {
+        left: 0;
+        opacity: 1;
+        transform:scale(1)
+    }
+
+    .header .navigation .pos-left, .top-header .navigation .pos-left, .footer .navigation .pos-left {
+        margin-right:auto
+    }
+
+    .header .navigation .pos-right, .top-header .navigation .pos-right, .footer .navigation .pos-right {
+        margin-left:auto
+    }
+
+    .header .navigation .nav-link-primary, .top-header .navigation .nav-link-primary, .footer .navigation .nav-link-primary {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 1.25em 1em;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        transition: background-color 300ms;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+        line-height: 6.25;
+        text-transform:uppercase
+    }
+
+    @media screen and (max-width: 1250px) {
+        .header .navigation .nav-link-primary, .top-header .navigation .nav-link-primary, .footer .navigation .nav-link-primary {
+            padding:1.25em .5em
+        }
+    }
+
+    .header .navigation .nav-link-primary:hover > .link-text, .top-header .navigation .nav-link-primary:hover > .link-text, .footer .navigation .nav-link-primary:hover > .link-text {
+        color:#60A3D9
+    }
+
+    .header .navigation .nav-link-primary.active .link-text, .top-header .navigation .nav-link-primary.active .link-text, .footer .navigation .nav-link-primary.active .link-text {
+        position: relative;
+        color:#60A3D9
+    }
+
+    .header .navigation .link-text, .top-header .navigation .link-text, .footer .navigation .link-text {
+        line-height:1
+    }
+
+    .header .navigation .link-text span, .top-header .navigation .link-text span, .footer .navigation .link-text span {
+        text-decoration:underline
+    }
+
+    .header .navigation .nav-list-secondary-container, .top-header .navigation .nav-list-secondary-container, .footer .navigation .nav-list-secondary-container {
+        position: absolute;
+        left: 10000px;
+        top: 100%;
+        width: 100%;
+        min-width: 200px;
+        background-color: #fff;
+        color: #3e3e3e;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+        border-top: 10px solid #6495ED;
+        border-radius: 0 0 3px 3px;
+        opacity: 0;
+        transform: scale(0.9);
+        transform-origin: center top;
+        transition:transform 425ms cubic-bezier(0.19, 1, 0.22, 1), opacity 425ms cubic-bezier(0.19, 1, 0.22, 1)
+    }
+
+    .header .navigation .nav-list-secondary-container::before, .top-header .navigation .nav-list-secondary-container::before, .footer .navigation .nav-list-secondary-container::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 15%;
+        top: -16px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom:8px solid #6495ED
+    }
+
+    .header .navigation .nav-list-secondary, .top-header .navigation .nav-list-secondary, .footer .navigation .nav-list-secondary {
+        list-style:none
+    }
+
+    .header .navigation .nav-link-secondary, .top-header .navigation .nav-link-secondary, .footer .navigation .nav-link-secondary {
+        display: block;
+        padding: .75em;
+        border-bottom: 1px solid rgba(62, 62, 62, 0.15);
+        text-decoration: none;
+        cursor: pointer;
+        transition:background-color 425ms ease
+    }
+
+    .header .navigation .nav-link-secondary:hover, .top-header .navigation .nav-link-secondary:hover, .footer .navigation .nav-link-secondary:hover {
+        background-color: #60A3D9;
+        color:#fff
+    }
+
+    .header {
+        background-color:#fff
+    }
+
+    .header .width-container {
+        padding:0 2em
+    }
+
+    @media screen and (max-width: 950px) {
+        .header .width-container {
+            display: flex;
+            justify-content:space-between
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .header .width-container {
+            padding:0 1em
+        }
+    }
+
+    .header .logo-col {
+        position: absolute;
+        bottom: 1em;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        text-align: center;
+        transform:translate(-50%, 0)
+    }
+
+    @media screen and (max-width: 1050px) {
+        .header .logo-col {
+            max-width:125px
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .header .logo-col {
+            position: relative;
+            bottom: inherit;
+            left: inherit;
+            transform: translate(0, 0);
+            order:1
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .header .logo-col {
+            padding:.5em 0
+        }
+    }
+
+    .header .nav-col {
+        width: 100%;
+        border-top:1px solid rgba(5, 136, 142, 0.25)
+    }
+
+    @media screen and (max-width: 950px) {
+        .header .nav-col {
+            width: 4em;
+            border-top: 0;
+            order:2
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .header .top-col {
+            margin: 0 auto;
+            margin-right: 0;
+            order:2
+        }
+    }
+
+    .header .top-navigation {
+        display: flex;
+        justify-content:flex-end
+    }
+
+    @media screen and (max-width: 500px) {
+        .header .top-navigation {
+            display:none
+        }
+    }
+
+    .header .top-item {
+        text-decoration: none;
+        text-align: center;
+        padding:1em
+    }
+
+    .header .top-text {
+        color: #4682B4;
+        font-size: 1.2857em;
+        font-weight: 300;
+        text-align:center
+    }
+
+    .header .top-text strong {
+        display: block;
+        font-weight:900
+    }
+
+    .header .navigation {
+        display: flex;
+        align-items: center;
+        margin: 0 -1em;
+        width:calc(100% + 2em)
+    }
+
+    @media screen and (max-width: 1250px) {
+        .header .navigation {
+            margin: 0 -0.5em;
+            width:calc(100% + 1em)
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .header .navigation {
+            display:none
+        }
+    }
+
+    .header .nav-tel .link-text {
+        color: #039be5;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.7142em;
+        font-weight: 900;
+        letter-spacing:1.2px
+    }
+
+    @media screen and (max-width: 1280px) {
+        .header .nav-tel .link-text {
+            font-size:1.5em
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .header .nav-tel .link-text {
+            font-size:1.25em
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .header .nav-col {
+            flex-shrink: 0;
+            padding-right:2em
+        }
+
+        .header .navigation {
+            display:none
+        }
+    }
+
+    .prefooter {
+        position: relative;
+        z-index: 0;
+        background-color: #3e3e3e;
+        color:#fff
+    }
+
+    .prefooter::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: calc(-10em + 2px);
+        left: 50%;
+        width: 105%;
+        height: 10em;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/prefooter-angle.svg');
+        background-size: contain;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        transform:translate(-50%, 0)
+    }
+
+    @media screen and (-ms-high-contrast: active), screen and(-ms-high-contrast: none) {
+        .prefooter::before {
+            display:none
+        }
+    }
+
+    .prefooter::after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -4em;
+        right: -20em;
+        width: 100%;
+        height: 100%;
+        max-width: 1400px;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/prefooter-yellow-angle.svg');
+        background-size: contain;
+        background-position: bottom right;
+        background-repeat:no-repeat
+    }
+
+    @media screen and (max-width: 1000px) {
+        .prefooter::after {
+            right:-10em
+        }
+    }
+
+    @media screen and (min-width: 1250px) {
+        .prefooter::after {
+            bottom:-16em
+        }
+    }
+
+    .prefooter .column-container {
+        position: relative;
+        z-index:1
+    }
+
+    @media screen and (max-width: 900px) {
+        .prefooter .column-container {
+            flex-wrap:wrap
+        }
+    }
+
+    .prefooter .column-1 {
+        flex:0 0 40%
+    }
+
+    .prefooter .column-1 .form-builder-container {
+        margin-top:2em
+    }
+
+    @media screen and (max-width: 900px) {
+        .prefooter .column-1 {
+            flex:0 0 100%
+        }
+    }
+
+    .prefooter .column-2 {
+        flex:0 0 60%
+    }
+
+    @media screen and (max-width: 900px) {
+        .prefooter .column-2 {
+            flex:0 0 100%
+        }
+    }
+
+    .prefooter .column-2 .button-line {
+        padding-top: 1.5em
+    }
+
+    .prefooter .column-2 .form-line-full:first-of-type > .form-block [class * ="form-line-"] {
+        margin-bottom:0
+    }
+
+    @media screen and (max-width: 860px) {
+        .prefooter .column-2 .form-line-full:first-of-type > .form-block [class * ="form-line-"] {
+            margin-bottom:1.5em
+        }
+    }
+
+    @media screen and (max-width: 860px) {
+        .prefooter .column-2 .form-line-full:first-of-type > .form-block [class * ="form-line-"]:last-of-type {
+            margin-bottom: 0
+        }
+    }
+
+    .prefooter .column-2 .form-line-full [class * ="form-line-"]:last-of-type {
+        margin-bottom:0
+    }
+
+    .prefooter .column-section + .column-section {
+        margin-top:2em
+    }
+
+    .prefooter .column-section-title {
+        padding-bottom: 1em;
+        color: #60A3D9;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5em;
+        font-weight: 300;
+        line-height: 1.25;
+        text-transform:uppercase
+    }
+
+    .prefooter .column-section-title strong {
+        color: #fff;
+        font-weight:900
+    }
+
+    .prefooter .tel-wrapper {
+        margin-top:-3.5em
+    }
+
+    .prefooter .tel {
+        display: inline-block;
+        position: relative;
+        padding-left: 1em;
+        color: #fbaf17;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5em;
+        font-weight: 900;
+        line-height: 1.1428;
+        letter-spacing: 1.05px;
+        text-decoration:none
+    }
+
+    @media screen and (max-width: 500px) {
+        .prefooter .tel {
+            margin-top:2em
+        }
+    }
+
+    .prefooter .tel::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 0;
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        content: '\f10b';
+        transform:translate(0, -50%)
+    }
+
+    .prefooter .blog-item {
+        display: flex;
+        align-items: center;
+        line-height: 1.5;
+        text-decoration:none
+    }
+
+    .prefooter .blog-item + .blog-item {
+        margin-top:2em
+    }
+
+    .prefooter .blog-title {
+        font-weight:700
+    }
+
+    .prefooter .blog-col-1 {
+        flex:0 0 96px
+    }
+
+    .prefooter .blog-col-2 .blog-inner {
+        padding-left:1em
+    }
+
+    .layout-home-hero {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        padding: 6em 0;
+        padding-bottom:12em
+    }
+
+    @media screen and (max-width: 860px) {
+        .layout-home-hero {
+            padding:4em 0
+        }
+    }
+
+    .layout-home-hero::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2))
+    }
+
+    .layout-home-hero::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 1px;
+        left: 50%;
+        width: 90%;
+        height: 100%;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/hero-angle.svg');
+        background-size: contain;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        transform:translate(-50%, 0)
+    }
+
+    @media screen and (-ms-high-contrast: active), screen and(-ms-high-contrast: none) {
+        .layout-home-hero::after {
+            display:none
+        }
+    }
+
+    .layout-home-hero .width-container {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        max-width:1000px
+    }
+
+    .layout-home-hero .top-title {
+        color: #68BBE3;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2857em;
+        font-weight: 900;
+        line-height: 1;
+        text-transform:uppercase
+    }
+
+    .layout-home-hero .hero-title {
+        color: #fff;
+        margin-bottom: 1.5em;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 2.8571em;
+        font-weight: 900;
+        line-height: 1.25;
+        text-transform:uppercase
+    }
+
+    @media screen and (max-width: 860px) {
+        .layout-home-hero .hero-title {
+            font-size:2em
+        }
+    }
+
+    .layout-home-hero .form-title {
+        padding-bottom: 1em;
+        color: #fff;
+        font-size: 1.2857em;
+        line-height:1.25
+    }
+
+    .layout-home-hero .form-title strong {
+        font-weight: 900
+    }
+
+    .layout-home-hero .form-line-full:first-of-type > .form-block [class * ="form-line-"] {
+        margin-bottom:0
+    }
+
+    @media screen and (max-width: 860px) {
+        .layout-home-hero .form-line-full:first-of-type > .form-block [class * ="form-line-"] {
+            margin-bottom:1.5em
+        }
+    }
+
+    @media screen and (max-width: 860px) {
+        .layout-home-hero .form-line-full:first-of-type > .form-block [class * ="form-line-"]:last-of-type {
+            margin-bottom: 0
+        }
+    }
+
+    .layout-home-hero .form-line-full [class * ="form-line-"]:last-of-type {
+        margin-bottom:0
+    }
+
+    .layout-home-hero .form-block.hidden {
+        display:none
+    }
+
+    .layout-home-hero .button-line {
+        padding-top:1.5em
+    }
+
+    .layout-home {
+        overflow: hidden;
+        padding-top: 2em;
+        padding-bottom:2em
+    }
+
+    .layout-home .top-section {
+        position:relative
+    }
+
+    @media screen and (max-width: 1160px) {
+        .layout-home .top-section .column-container {
+            flex-wrap:wrap
+        }
+    }
+
+    .layout-home .top-section .column-1 {
+        flex: 0 0 60%;
+        padding-left: 29%;
+        max-width:60%
+    }
+
+    @media screen and (max-width: 1160px) {
+        .layout-home .top-section .column-1 {
+            position: relative;
+            flex: 0 0 100%;
+            max-width: 100%;
+            order: 1;
+            margin-top: 2em;
+            padding-left:38%
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-home .top-section .column-1 {
+            padding-left: 0;
+            margin-top:1em
+        }
+    }
+
+    .layout-home .top-section .column-1 .column-inner {
+        position: relative;
+        max-width:350px
+    }
+
+    @media screen and (max-width: 1160px) {
+        .layout-home .top-section .column-1 .column-inner {
+            max-width: 80%;
+            margin:2em auto 0
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-home .top-section .column-1 .column-inner {
+            margin-top: 0;
+            max-width:90%
+        }
+    }
+
+    .layout-home .top-section .column-1 .column-inner .testimonial-wrapper {
+        display:none
+    }
+
+    .layout-home .top-section .column-1 .column-inner .testimonial-wrapper:first-child {
+        display:block
+    }
+
+    .layout-home .top-section .column-2 {
+        flex: 0 0 40%;
+        max-width:550px
+    }
+
+    @media screen and (max-width: 1160px) {
+        .layout-home .top-section .column-2 {
+            flex: 0 0 100%;
+            max-width:none
+        }
+    }
+
+    .layout-home .top-section .column-2 .column-inner {
+        padding-right:0
+    }
+
+    @media screen and (max-width: 1160px) {
+        .layout-home .top-section .column-2 .column-inner {
+            display:flex
+        }
+    }
+
+    @media screen and (max-width: 870px) {
+        .layout-home .top-section .column-2 .column-inner {
+            flex-wrap:wrap
+        }
+    }
+
+    @media screen and (max-width: 1160px) {
+        .layout-home .top-section .column-2 .service-wrapper {
+            flex: 0 0 33.33%;
+            margin-top:0
+        }
+    }
+
+    @media screen and (max-width: 870px) {
+        .layout-home .top-section .column-2 .service-wrapper {
+            flex:0 0 50%
+        }
+
+        .layout-home .top-section .column-2 .service-wrapper:last-child {
+            flex: 0 0 100%;
+            margin-top:4em
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-home .top-section .column-2 .service-wrapper {
+            flex: 0 0 100%;
+            margin-top:4em
+        }
+
+        .layout-home .top-section .column-2 .service-wrapper:first-child {
+            margin-top:0
+        }
+    }
+
+    .layout-home .roof-roof-dog {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/roofroofdog3.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 42%;
+        height: 587px;
+        left: -13%;
+        top: 0;
+        z-index:0
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and(min--moz-device-pixel-ratio: 1.5), only screen and(min-device-pixel-ratio: 1.5) {
+        .layout-home .roof-roof-dog {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/roofroofdog3@2x.jpg');
+            background-size:contain
+        }
+    }
+
+    @media screen and (max-width: 1160px) {
+        .layout-home .roof-roof-dog {
+            height: 350px;
+            left:0
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-home .roof-roof-dog {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            height: 250px;
+            width:250px
+        }
+    }
+
+    .layout-home .mid-section {
+        position: relative;
+        z-index: 1;
+        margin-top:6em
+    }
+
+    @media screen and (max-width: 1160px) {
+        .layout-home .mid-section {
+            margin-top:-10vw
+        }
+    }
+
+    .layout-home .mid-section::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/warranty.svg');
+        bottom: -6em;
+        left: 3em;
+        width: 25em;
+        height:25em
+    }
+
+    @media screen and (max-width: 960px) {
+        .layout-home .mid-section::before {
+            left: 1em;
+            width: 30vw;
+            bottom: 50%;
+            transform:translate(0, 50%)
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-home .mid-section::before {
+            display:none
+        }
+    }
+
+    .layout-home .animation-wrapper {
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 5%;
+        width: 100%;
+        height: 100%;
+        transform:translate3d(0, -50%, 0)
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-home .animation-wrapper {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate3d(0, 0, 0);
+            margin-top:-5em
+        }
+    }
+
+    .layout-home .animation-wrapper.mobile {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/roof@2x.png');
+        background-size:contain
+    }
+
+    .layout-home .animation-wrapper canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%)
+    }
+
+    .layout-home .animation-controller {
+        position: absolute;
+        top: 6em;
+        right: 10em;
+        width: 112px;
+        height: 112px;
+        background-color: transparent;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/roof-action.svg');
+        background-size: auto 85%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        cursor: pointer;
+        transition:background-color 300ms
+    }
+
+    @media screen and (max-width: 960px) {
+        .layout-home .animation-controller {
+            top: 50%;
+            right: 0;
+            transform:translate(0, -50%)
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-home .animation-controller {
+            display: none
+        }
+    }
+
+    .layout-home .animation-controller[data-status="collapse"] {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/roof-action-expand.svg')
+    }
+
+    .layout-home .animation-controller:hover {
+        background-color:#eaeaea
+    }
+
+    .layout-home .points-wrapper {
+        position: relative;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%
+    }
+
+    @media screen and (max-width: 960px) {
+        .layout-home .points-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top:170px
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-home .points-wrapper {
+            margin-top:0
+        }
+    }
+
+    .layout-home .point-wrapper {
+        position: relative;
+        max-width: 300px;
+        cursor: pointer;
+        -webkit-tap-highlight-color:rgba(0, 0, 0, 0)
+    }
+
+    @media screen and (max-width: 960px) {
+        .layout-home .point-wrapper {
+            flex: 0 0 50%;
+            margin: 0 !important;
+            padding: 0 1em 0 2em;
+            max-width:none
+        }
+
+        .layout-home .point-wrapper .number-wrapper {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: auto !important;
+            transform:translate(-100%, 0) !important
+        }
+
+        .layout-home .point-wrapper.point-1, .layout-home .point-wrapper.point-2 {
+            margin-bottom:75vw !important
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-home .point-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            flex: 0 0 100%;
+            width: 100%;
+            margin-bottom:0 !important
+        }
+
+        .layout-home .point-wrapper.point-1, .layout-home .point-wrapper.point-2 {
+            margin-bottom:0 !important
+        }
+
+        .layout-home .point-wrapper .number-wrapper {
+            position: absolute;
+            top: -2.5em !important;
+            left: 0;
+            right: auto !important;
+            transform:translate(0, 0) !important
+        }
+
+        .layout-home .point-wrapper.point-2 .number-wrapper {
+            left:25%
+        }
+
+        .layout-home .point-wrapper.point-3 .number-wrapper {
+            left:50%
+        }
+
+        .layout-home .point-wrapper.point-4 .number-wrapper {
+            left:75%
+        }
+
+        .layout-home .point-wrapper .point-inner {
+            background-color:transparent
+        }
+
+        .layout-home .point-wrapper .description-title, .layout-home .point-wrapper .description-content {
+            display:none
+        }
+
+        .layout-home .point-wrapper.active .description-title, .layout-home .point-wrapper.active .description-content {
+            display:block
+        }
+    }
+
+    .layout-home .point-wrapper + .point-wrapper {
+        margin-top:4em
+    }
+
+    .layout-home .point-wrapper.active .point-inner {
+        background-color:rgba(234, 234, 234, 0.9)
+    }
+
+    .layout-home .point-wrapper.active .number-wrapper {
+        background-color: #05888e;
+        transition:background-color 300ms
+    }
+
+    .layout-home .point-inner {
+        position: relative;
+        padding: 20px;
+        border-radius: 3px;
+        background-color: rgba(247, 247, 247, 0.9);
+        transition:background-color 300ms
+    }
+
+    .layout-home .point-1 .point-inner, .layout-home .point-2 .point-inner {
+        padding-right:30px
+    }
+
+    .layout-home .point-1 .number-wrapper, .layout-home .point-2 .number-wrapper {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transform:translate(100%, 0)
+    }
+
+    .layout-home .point-1 {
+        margin-top: 14em;
+        margin-left:4vw
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-home .point-1 {
+            margin-left:0
+        }
+    }
+
+    .layout-home .point-3, .layout-home .point-4 {
+        margin: 0 auto;
+        margin-right:0
+    }
+
+    .layout-home .point-3 .point-inner, .layout-home .point-4 .point-inner {
+        padding-left:30px
+    }
+
+    .layout-home .point-3 .number-wrapper, .layout-home .point-4 .number-wrapper {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        transform:translate(-100%, 0)
+    }
+
+    .layout-home .point-4 {
+        margin-right:4vw
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-home .point-4 {
+            margin-right:0
+        }
+    }
+
+    .layout-home .bottom-section {
+        position: relative;
+        margin-top:11em
+    }
+
+    @media screen and (max-width: 860px) {
+        .layout-home .bottom-section {
+            margin-top:16em
+        }
+    }
+
+    .layout-home .bottom-section::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/nails@2x.jpg');
+        top: -6em;
+        right: -6em;
+        width: 25em;
+        height: 25em;
+        z-index:0
+    }
+
+    .layout-home .bottom-section .column-container {
+        position: relative;
+        z-index:1
+    }
+
+    .layout-home .stat-wrapper:first-of-type {
+        margin-left:-4em
+    }
+
+    @media screen and (max-width: 850px) {
+        .layout-home .stat-wrapper:first-of-type {
+            margin-left:auto
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .layout-home .stat-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align:center
+        }
+    }
+
+    .layout-home .stat-text-top, .layout-home .stat-text-bottom {
+        display: block;
+        margin: .5em 0;
+        color: #3e3e3e;
+        font-size: 1.4285em;
+        font-weight: 900;
+        line-height: 1;
+        text-transform:uppercase
+    }
+
+    .layout-home .stat-text-bottom {
+        margin-bottom:-0.5em
+    }
+
+    .layout-home .stat {
+        display: inline-block;
+        color: #2B6AD0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height:1.39857
+    }
+
+    @media screen and (max-width: 550px) {
+        .layout-home .stat {
+            font-size:4em
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .layout-home .stat {
+            font-size:3em
+        }
+    }
+
+    .layout-home .stat-text-bottom {
+        display: inline-block;
+        margin-left:.5em
+    }
+
+    .layout-home .logo-grid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 -2em;
+        margin-top:4em
+    }
+
+    @media screen and (max-width: 850px) {
+        .layout-home .logo-grid {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top:2em
+        }
+    }
+
+    @media screen and (max-width: 525px) {
+        .layout-home .logo-grid {
+            justify-content:center
+        }
+    }
+
+    .layout-home .logo-item {
+        flex:1 1 50%
+    }
+
+    @media screen and (max-width: 525px) {
+        .layout-home .logo-item {
+            flex: 0 1 100%;
+            max-width:300px
+        }
+    }
+
+    .layout-home .logo-item img {
+        width: 100%;
+        max-width:290px
+    }
+
+    .layout-home .logo-item:first-of-type, .layout-home .logo-item:last-of-type {
+        flex:1 0 25%
+    }
+
+    @media screen and (max-width: 525px) {
+        .layout-home .logo-item:first-of-type, .layout-home .logo-item:last-of-type {
+            flex: 0 1 100%;
+            max-width:300px
+        }
+    }
+
+    .layout-home .logo-item:first-of-type img, .layout-home .logo-item:last-of-type img {
+        width: 100%;
+        max-width:175px
+    }
+
+    .layout-home .logo-inner {
+        padding:.5em 2em
+    }
+
+    @media screen and (max-width: 525px) {
+        .layout-home .logo-inner {
+            padding: 1em;
+            text-align:center
+        }
+    }
+
+    .layout-home .logo-wrapper {
+        display: block;
+        text-align: center;
+        text-decoration:none
+    }
+
+    .layout-home .logo-link {
+        opacity: 1;
+        transition:opacity 300ms ease
+    }
+
+    .layout-home .logo-link:hover {
+        opacity:.7
+    }
+
+    .layout-hero {
+        padding:0
+    }
+
+    .layout-hero .slide-wrapper {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 6em 0;
+        padding-bottom: 12em;
+        position:relative
+    }
+
+    .layout-hero .slide-wrapper::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2))
+    }
+
+    .layout-hero .slide-wrapper::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        width: 105%;
+        height: 100%;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/hero-angle.svg');
+        background-size: contain;
+        background-position: bottom -2px left;
+        background-repeat: no-repeat;
+        transform:translate(-50%, 0)
+    }
+
+    @media screen and (-ms-high-contrast: active), screen and(-ms-high-contrast: none) {
+        .layout-hero .slide-wrapper::after {
+            display:none
+        }
+    }
+
+    .layout-hero .width-container {
+        position: relative;
+        z-index:1
+    }
+
+    .layout-hero .inner-wrapper {
+        max-width:500px
+    }
+
+    .layout-hero .section-title {
+        margin-bottom: 1rem;
+        color: #fff;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 7.1428em;
+        font-weight: 900;
+        line-height:.875
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-hero .section-title {
+            font-size:5em
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .layout-hero .section-title {
+            font-size:3em
+        }
+    }
+
+    .layout-hero .subtitle {
+        color: #109ed5;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2857em;
+        font-weight: 900;
+        line-height:1.25
+    }
+
+    .layout-hero.blog-hero .section-title {
+        margin-bottom: .5em;
+        font-size:2.8571em
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-hero.blog-hero .section-title {
+            font-size:1.75em
+        }
+    }
+
+    .layout-hero.blog-hero .inner-wrapper {
+        max-width:650px
+    }
+
+    .layout-hero.blog-hero .content-container {
+        margin-bottom: 1em;
+        color:#fff
+    }
+
+    .layout-hero.blog-article .slide-wrapper {
+        padding:15em 0
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-hero.blog-article .slide-wrapper {
+            padding:12em 0
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .layout-hero.blog-article .slide-wrapper {
+            padding:8em 0
+        }
+    }
+
+    .layout-two-columns .section-title {
+        text-align:center
+    }
+
+    .layout-two-columns .column-container {
+        margin: 0 -4em;
+        margin-top:2em
+    }
+
+    @media screen and (max-width: 1000px) {
+        .layout-two-columns .column-container {
+            margin: 0 -2em;
+            margin-top:2em
+        }
+    }
+
+    .layout-two-columns .column-inner {
+        padding:2em 4em
+    }
+
+    @media screen and (max-width: 1000px) {
+        .layout-two-columns .column-inner {
+            padding:2em
+        }
+    }
+
+    .layout-service-items .column-container {
+        margin:0 -4em
+    }
+
+    @media screen and (max-width: 1025px) {
+        .layout-service-items .column-container {
+            flex-wrap:wrap
+        }
+    }
+
+    .layout-service-items .column-inner {
+        padding:2em 4em
+    }
+
+    .layout-service-items .column-1 {
+        flex: 0 0 35%;
+        max-width:35%
+    }
+
+    @media screen and (max-width: 1025px) {
+        .layout-service-items .column-1 {
+            flex: 0 0 100%;
+            max-width:100%
+        }
+    }
+
+    .layout-service-items .column-2 {
+        flex:0 0 65%
+    }
+
+    @media screen and (max-width: 1025px) {
+        .layout-service-items .column-2 {
+            flex:0 0 100%
+        }
+    }
+
+    .layout-service-items .column-2 .column-inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top:-2em
+    }
+
+    .layout-service-items .service-wrapper {
+        flex: 1 0 50%;
+        margin-top:3em
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-service-items .service-wrapper {
+            flex:1 0 100%
+        }
+    }
+
+    .layout-service-items .bx-wrapper {
+        margin-top:3em
+    }
+
+    @media screen and (max-width: 1025px) {
+        .layout-service-items .bx-wrapper {
+            max-width: 400px !important;
+            margin: 0 auto;
+            margin-top:3em
+        }
+    }
+
+    .layout-content-image .testimonials {
+        margin-top: 2em;
+        max-width: 400px;
+        margin-left:auto
+    }
+
+    @media screen and (max-width: 860px) {
+        .layout-content-image .testimonials {
+            margin: 0 auto;
+            margin-top:2em
+        }
+    }
+
+    .layout-content-image .btn-wrapper {
+        text-align: right;
+        margin-top:2em
+    }
+
+    @media screen and (max-width: 860px) {
+        .layout-content-image .btn-wrapper {
+            text-align:center
+        }
+    }
+
+    .layout-content-image .image-wrapper-circle::before {
+        background-color:#2b6ad0
+    }
+
+    .layout-content-image-gallery .item-inner {
+        position: relative;
+        padding: 1em;
+        padding-left:4em
+    }
+
+    .layout-content-image-gallery .item-inner::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 1.25em;
+        content: '?';
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        transform: translate(-50%, -50%);
+        z-index:1
+    }
+
+    .layout-content-image-gallery .item-inner::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 1.25em;
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 3em;
+        background-color: #2b6ad0;
+        transform: translate(-50%, -50%);
+        z-index:0
+    }
+
+    .layout-content-image-gallery .control-item {
+        text-decoration:none
+    }
+
+    .layout-content-image-gallery .control-item.active .item-inner::after {
+        background-color:#0000CD
+    }
+
+    .layout-content-image-gallery .item-text {
+        font-size:1.1428em
+    }
+
+    .layout-content-image-gallery .item-text strong {
+        font-weight:700
+    }
+
+    .layout-content-image-gallery .bx-controls {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%
+    }
+
+    .layout-content-image-gallery .bx-controls-direction {
+        position: absolute;
+        top: 50%;
+        right:0
+    }
+
+    .layout-content-image-gallery .bx-prev, .layout-content-image-gallery .bx-next {
+        width: 2em;
+        height: 4em;
+        padding: 1em 2em;
+        background-color:#fff
+    }
+
+    .layout-content-image-gallery .bx-prev::before, .layout-content-image-gallery .bx-next::before {
+        width: 2em;
+        height:3em
+    }
+
+    .layout-content-image-gallery .bx-prev::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/arrow-up.svg')
+    }
+
+    .layout-content-image-gallery .bx-next::before {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/arrow-down.svg')
+    }
+
+    .layout-testimonials {
+        background-color:#f0f0f0
+    }
+
+    .layout-testimonials .text-center {
+        max-width: 800px;
+        margin:0 auto
+    }
+
+    .layout-testimonials .bx-wrapper {
+        margin-top:2em
+    }
+
+    .layout-testimonials .column-container {
+        justify-content:center
+    }
+
+    .layout-testimonials .column {
+        flex: 1 0 33.333%;
+        max-width:50%
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-testimonials .column {
+            max-width:none
+        }
+    }
+
+    @media screen and (max-width: 860px) {
+        .layout-testimonials .column {
+            flex:0 1 400px
+        }
+    }
+
+    .layout-testimonials.layout-testimonial-grid .column-container {
+        flex-wrap:wrap
+    }
+
+    .layout-testimonials.layout-testimonial-grid .column {
+        flex:0 0 33.333%
+    }
+
+    @media screen and (max-width: 860px) {
+        .layout-testimonials.layout-testimonial-grid .column {
+            flex:0 1 400px
+        }
+    }
+
+    .layout-faq .column-container {
+        flex-wrap: wrap;
+        justify-content:center
+    }
+
+    .layout-faq .column {
+        flex:0 0 33.333%
+    }
+
+    @media screen and (max-width: 850px) {
+        .layout-faq .column {
+            flex:0 0 50%
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .layout-faq .column {
+            flex:0 0 100%
+        }
+    }
+
+    .layout-faq .faq-question, .layout-faq .faq-answer {
+        position: relative;
+        padding-left:3rem
+    }
+
+    .layout-faq .faq-question::before, .layout-faq .faq-answer::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        color: #fff;
+        line-height: 2rem;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align:center
+    }
+
+    .layout-faq .faq-question {
+        margin-bottom: 1em;
+        font-size: 1.1428em;
+        font-weight: 700;
+        line-height:1.5
+    }
+
+    .layout-faq .faq-question::before {
+        top: 50%;
+        background-color: #fbaf17;
+        content: "Q";
+        transform:translate(0, -50%)
+    }
+
+    .layout-faq .faq-answer::before {
+        top: 0;
+        background-color: #00d6ff;
+        content: "A"
+    }
+
+    .layout-embed-columns .column-title {
+        margin-bottom: 2em;
+        color: #00d6ff;
+        font-size: 1.3571em;
+        font-weight: 700;
+        line-height: 1.2631;
+        text-transform:uppercase
+    }
+
+    .layout-embed-columns .column-container {
+        flex-wrap:wrap
+    }
+
+    .layout-full-content {
+        background-color:#f0f0f0
+    }
+
+    .layout-full-content .width-container {
+        max-width: 1000px;
+        text-align:center
+    }
+
+    .layout-full-content .btn-wrapper {
+        margin-top:2em
+    }
+
+    .layout-form {
+        background-color:#f0f0f0
+    }
+
+    .layout-form .width-container {
+        max-width: 1000px;
+        text-align:center
+    }
+
+    .layout-form .form-builder-container {
+        margin-top:2em
+    }
+
+    .layout-standard .width-container {
+        max-width: 1000px;
+        padding:0 10em
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-standard .width-container {
+            padding:0 6em
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .layout-standard .width-container {
+            padding:0 2em
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .layout-standard .width-container {
+            padding:0 1em
+        }
+    }
+
+    .layout-image-map {
+        background-color:#f0f0f0
+    }
+
+    .layout-image-map .image-map-wrapper {
+        margin-top:2em
+    }
+
+    .layout-image-map .image-map-inner {
+        position:relative
+    }
+
+    .layout-image-map .points-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:rgba(0, 0, 0, 0.5)
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-image-map .points-wrapper {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            background-color:transparent
+        }
+    }
+
+    .layout-image-map .point-wrapper {
+        position: absolute;
+        margin-left: -2.14285em;
+        margin-top: -2.14285em;
+        transform-origin: 2.142em 2.142em;
+        transform: scale(0.5);
+        opacity: 0;
+        transition:transform 600ms 200ms cubic-bezier(0.435, 1.565, 0.81, 0.875), opacity 300ms 200ms
+    }
+
+    @media screen and (max-width: 950px) {
+        .layout-image-map .point-wrapper {
+            margin-left: -1.5em;
+            margin-top:-1.5em
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-image-map .point-wrapper {
+            position: relative;
+            left: auto !important;
+            top: auto !important;
+            right: auto !important;
+            flex: 0 0 100%;
+            margin:1em 0 0
+        }
+
+        .layout-image-map .point-wrapper .number-wrapper {
+            display:none
+        }
+    }
+
+    @media screen and (min-width: 950px) {
+        .layout-image-map .point-wrapper.position-right {
+            transform:translate(calc(-100% - 2.13285em), -2.14285em)
+        }
+
+        .layout-image-map .point-wrapper.position-right .number-wrapper {
+            order:2
+        }
+
+        .layout-image-map .point-wrapper.position-right .point-title {
+            order: 1;
+            padding-right: 2em;
+            padding-left: 0;
+            text-align: right;
+            transform:translate3d(-20px, 0, 0)
+        }
+
+        .layout-image-map .point-wrapper.position-right .point-inner {
+            margin-left: 0;
+            margin-right: -0.5em;
+            border-left: 0;
+            border-right:1em solid #88bd9a
+        }
+
+        .layout-image-map .point-wrapper.position-right .point-image-wrapper {
+            left: inherit;
+            right: 0;
+            transform:translate(70%, -70%)
+        }
+    }
+
+    .layout-image-map .point-wrapper.active {
+        z-index:100
+    }
+
+    .layout-image-map .point-wrapper.inview {
+        opacity: 1;
+        transform:scale(1)
+    }
+
+    .layout-image-map .point-wrapper.inview .point-title {
+        opacity: 1;
+        transform:translate3d(0, 0, 0)
+    }
+
+    .layout-image-map .point-title {
+        padding-left: 2em;
+        color: #fff;
+        font-size: 1.14285em;
+        font-weight: 700;
+        text-transform: uppercase;
+        max-width: 250px;
+        transform: translate3d(-20px, 0, 0);
+        opacity: 0;
+        transition:transform 600ms 600ms cubic-bezier(0.19, 1, 0.22, 1), opacity 300ms 600ms
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-image-map .point-title {
+            display:none
+        }
+    }
+
+    .layout-image-map .point-title.inner-title {
+        padding-left:0
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-image-map .point-title.inner-title {
+            display:block
+        }
+    }
+
+    .layout-image-map .point-description {
+        display: none;
+        cursor:pointer
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-image-map .point-description {
+            display:flex
+        }
+
+        .layout-image-map .point-description .number-wrapper {
+            position:absolute
+        }
+    }
+
+    .layout-image-map .point-description.active {
+        display:flex
+    }
+
+    .layout-image-map .point-description.active .number-wrapper {
+        background-color:#5885AF
+    }
+
+    .layout-image-map .point-inner {
+        max-width: 300px;
+        margin-left: -0.5em;
+        padding: 1em;
+        background-color: #3e3e3e;
+        color: #fff;
+        border-left: 1em solid #5885AF;
+        z-index:1
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-image-map .point-inner {
+            max-width: none;
+            flex:1 0 80%
+        }
+    }
+
+    .layout-image-map .point-list {
+        font-size: .875em;
+        line-height: 1.5;
+        margin-left:1em
+    }
+
+    .layout-image-map .point-list li {
+        margin:.5em 0
+    }
+
+    .layout-image-map .point-image-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transform: translate(-70%, -70%);
+        z-index:0
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-image-map .point-image-wrapper {
+            position: relative;
+            transform:translate(0, 0)
+        }
+    }
+
+    .layout-image-map .point-image-wrapper-item {
+        border-radius: 100%;
+        overflow: hidden;
+        display: block;
+        width: 200px;
+        border-radius: 50%;
+        border:5px solid #fff
+    }
+
+    @media screen and (max-width: 950px) {
+        .layout-image-map .point-image-wrapper-item {
+            max-width:150px
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-image-map .point-image-wrapper-item {
+            max-width:100%
+        }
+    }
+
+    .layout-image-map .point {
+        display: none;
+        align-items: center;
+        cursor:pointer
+    }
+
+    .layout-image-map .point.active {
+        display:flex
+    }
+
+    @media screen and (max-width: 680px) {
+        .layout-image-map .point.active {
+            display:none
+        }
+    }
+
+    .layout-image-map .number-wrapper {
+        flex-shrink:0
+    }
+
+    .layout-image-map .image-wrapper-item {
+        display:block
+    }
+
+    .layout-image-grid .top-content-container {
+        max-width: 700px;
+        margin: 0 auto 4em;
+        text-align:center
+    }
+
+    .layout-image-grid .columns-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin:-1.5em
+    }
+
+    @media screen and (max-width: 600px) {
+        .layout-image-grid .columns-container {
+            margin:-1em
+        }
+    }
+
+    .layout-image-grid .grid-item {
+        flex: 0 0 14.28%;
+        border: 2px solid transparent;
+        box-sizing: border-box;
+        transition:border-color 300ms
+    }
+
+    .layout-image-grid .grid-item:hover {
+        border-color:#fbaf17
+    }
+
+    @media screen and (max-width: 800px) {
+        .layout-image-grid .grid-item {
+            flex:0 0 25%
+        }
+    }
+
+    @media screen and (max-width: 630px) {
+        .layout-image-grid .grid-item {
+            flex:0 0 33.333%
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .layout-image-grid .grid-item {
+            flex:0 0 50%
+        }
+    }
+
+    .layout-image-grid .grid-item-inner {
+        display: block;
+        margin: 1.5em 1.5em 3em;
+        text-decoration:none
+    }
+
+    @media screen and (max-width: 600px) {
+        .layout-image-grid .grid-item-inner {
+            margin:1em 1em 2em
+        }
+    }
+
+    .layout-image-grid .grid-item-image {
+        display: block;
+        width:100%
+    }
+
+    .layout-image-grid .grid-item-title {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: -1.5rem;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1;
+        text-align:center
+    }
+
+    @media screen and (max-width: 600px) {
+        .layout-image-grid .grid-item-title {
+            margin-bottom:-1rem
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-blog .column-container {
+            flex-wrap:wrap
+        }
+    }
+
+    .layout-blog .column-1 {
+        flex:0 0 6em
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-blog .column-1 {
+            flex:0 0 100%
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-blog .column-inner {
+            padding:.5em 2em
+        }
+    }
+
+    .layout-blog .social-networks {
+        padding-top: 2em;
+        flex-wrap: wrap;
+        font-size:1.25em
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-blog .social-networks {
+            justify-content: flex-start;
+            padding-top:0
+        }
+    }
+
+    .layout-blog .social-networks li {
+        flex:0 0 100%
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-blog .social-networks li {
+            flex:0 0 auto
+        }
+    }
+
+    .layout-blog .social-link::before {
+        color:#02813f
+    }
+
+    .layout-blog .social-link:hover::before {
+        color:#03b358
+    }
+
+    .layout-blog .categories-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin:0 -1em
+    }
+
+    .layout-blog .category-inner {
+        display: block;
+        padding: 1em;
+        text-decoration:none
+    }
+
+    .layout-blog .category-inner.active .category-text {
+        color:#fbaf17
+    }
+
+    .layout-blog .category-text {
+        color: #7e7e7e;
+        font-size: 1.14285em;
+        font-weight: 700;
+        text-transform:uppercase
+    }
+
+    .layout-blog .column-2 {
+        flex: 0 0 100%;
+        max-width:calc(100% - 6em)
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-blog .column-2 {
+            max-width:100%
+        }
+    }
+
+    .layout-blog .column-2 .column-inner {
+        padding-right:6em
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-blog .column-2 .column-inner {
+            padding-right:2em
+        }
+    }
+
+    .layout-blog .articles-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin:0 -2em
+    }
+
+    .layout-blog .article-wrapper {
+        flex:0 0 50%
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-blog .article-wrapper {
+            flex:0 0 100%
+        }
+    }
+
+    .layout-blog .article-wrapper:nth-of-type(3) {
+        flex:0 0 100%
+    }
+
+    .layout-blog .article-wrapper:nth-of-type(3) .article-inner {
+        display:flex
+    }
+
+    .layout-blog .article-wrapper:nth-of-type(3) .image-wrapper, .layout-blog .article-wrapper:nth-of-type(3) .content-wrapper {
+        flex: 0 0 50%;
+        max-width:50%
+    }
+
+    .layout-blog .article-wrapper:nth-of-type(3) .image-wrapper {
+        order:2
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-blog .article-wrapper:nth-of-type(3) .image-wrapper {
+            position: relative;
+            flex: 0 0 30%;
+            max-width: 30%;
+            order: 1;
+            overflow:hidden
+        }
+    }
+
+    .layout-blog .article-wrapper:nth-of-type(3) .content-wrapper {
+        order:1
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-blog .article-wrapper:nth-of-type(3) .content-wrapper {
+            flex: 0 0 70%;
+            max-width: 70%;
+            order: 2;
+            padding:1em
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .layout-blog .article-wrapper:nth-of-type(3) .content-wrapper {
+            flex: 0 0 100%;
+            max-width:100%
+        }
+    }
+
+    .layout-blog .article-wrapper:nth-of-type(3) .article-title {
+        font-size:2.14285em
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-blog .article-wrapper:nth-of-type(3) .article-title {
+            font-size:1.35714em
+        }
+    }
+
+    .layout-blog .article-categories {
+        display: flex;
+        flex-wrap: wrap;
+        margin:0 -1em
+    }
+
+    .layout-blog .article-categories .category-text {
+        color:#fbaf17
+    }
+
+    .layout-blog .article-inner {
+        display: block;
+        margin: 2em;
+        height: calc(100% - 4em);
+        background-color: #274472;
+        text-decoration:none
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-blog .article-inner {
+            display:flex
+        }
+    }
+
+    .layout-blog .content-wrapper {
+        background-color: #274472;
+        padding:2em
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-blog .content-wrapper {
+            flex: 0 0 70%;
+            max-width: 70%;
+            order: 2;
+            padding:1em
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .layout-blog .content-wrapper {
+            flex: 0 0 100%;
+            max-width:100%
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-blog .image-wrapper {
+            position: relative;
+            flex: 0 0 30%;
+            max-width: 30%;
+            order: 1;
+            overflow:hidden
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .layout-blog .image-wrapper {
+            display:none !important
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-blog .image-wrapper-item {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            max-width: none;
+            transform:translate(-50%, -50%)
+        }
+    }
+
+    .layout-blog .image-wrapper, .layout-blog .image-wrapper-item, .layout-blog .article-link {
+        display: block;
+        text-decoration:none
+    }
+
+    .layout-blog .article-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.35714em;
+        font-weight: 700;
+        letter-spacing: 1.14px;
+        text-transform:uppercase
+    }
+
+    .layout-blog .article-excerpt {
+        margin-top:1rem
+    }
+
+    @media screen and (max-width: 750px) {
+        .layout-blog .article-excerpt {
+            margin-top:0
+        }
+    }
+
+    .layout-blog-article .width-container {
+        position:relative
+    }
+
+    @media screen and (max-width: 850px) {
+        .layout-blog-article .width-container {
+            padding-left:6em
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .layout-blog-article .width-container {
+            padding-left:4em
+        }
+    }
+
+    .layout-blog-article .article-categories {
+        display: flex;
+        flex-wrap: wrap;
+        margin:0 -1em
+    }
+
+    .layout-blog-article .category-inner {
+        display: block;
+        padding: 1em;
+        text-decoration:none
+    }
+
+    .layout-blog-article .category-text {
+        color: #274472;
+        font-size: 1.14285em;
+        font-weight: 700;
+        text-transform:uppercase
+    }
+
+    .layout-blog-article .social-sharer {
+        position: absolute;
+        left:2em
+    }
+
+    @media screen and (max-width: 650px) {
+        .layout-blog-article .social-sharer {
+            left:0
+        }
+    }
+
+    .layout-blog-article .social-networks {
+        padding-top: 2em;
+        flex-wrap: wrap;
+        font-size:1.25em
+    }
+
+    .layout-blog-article .social-networks li {
+        flex:0 0 100%
+    }
+
+    .layout-blog-article .social-link::before {
+        color:#02813f
+    }
+
+    .layout-blog-article .social-link:hover::before {
+        color:#03b358
+    }
+
+    .layout-blog-article .social-header {
+        position: absolute;
+        left: -2em;
+        top: 0;
+        transform-origin: top left;
+        transform:rotate(-90deg) translate(-175%, 0)
+    }
+
+    @media screen and (max-width: 650px) {
+        .layout-blog-article .social-header {
+            display:none
+        }
+    }
+
+    .layout-blog-article .social-title {
+        color: #ddd;
+        font-size: 1.14285em;
+        font-weight: 700;
+        text-align: left;
+        text-transform:uppercase
+    }
+
+    .layout-blog-article .related-wrapper {
+        margin:0 -10em
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-blog-article .related-wrapper {
+            margin:0
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .layout-blog-article .related-wrapper {
+            margin-left:-4em
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .layout-blog-article .related-wrapper {
+            margin-left:-3em
+        }
+    }
+
+    .layout-blog-article .column-container {
+        margin:0 -4em
+    }
+
+    @media screen and (max-width: 850px) {
+        .layout-blog-article .column-container {
+            margin:0 -2em
+        }
+    }
+
+    .layout-blog-article .column-1 .column-inner {
+        padding-left:10em
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-blog-article .column-1 .column-inner {
+            padding-left:6em
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .layout-blog-article .column-1 .column-inner {
+            padding:2em
+        }
+    }
+
+    .layout-blog-article .column-2 .column-inner {
+        padding-right: 10em;
+        text-align:right
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-blog-article .column-2 .column-inner {
+            padding-right:6em
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .layout-blog-article .column-2 .column-inner {
+            padding: 2em;
+            text-align:left
+        }
+    }
+
+    .layout-blog-article .column-2 .column-inner::before {
+        left: inherit;
+        right: 2em;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/arrow-right.svg')
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-blog-article .column-2 .column-inner::before {
+            right:1em
+        }
+    }
+
+    .layout-blog-article .column-2 .article-categories {
+        justify-content:flex-end
+    }
+
+    .layout-blog-article .column-inner {
+        position: relative;
+        display: block;
+        margin: 2em;
+        height: calc(100% - 4em);
+        background-color: #ddd;
+        text-decoration:none
+    }
+
+    .layout-blog-article .column-inner::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 2em;
+        top: 50%;
+        width: 3em;
+        height: 2em;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/arrow-left.svg');
+        transform: translate(0, -50%);
+        background-position: center;
+        background-size: contain;
+        background-repeat:no-repeat
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-blog-article .column-inner::before {
+            left:1em
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .layout-blog-article .column-inner::before {
+            display:none
+        }
+    }
+
+    .layout-blog-article .article-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.35714em;
+        font-weight: 700;
+        letter-spacing: 1.14px;
+        text-transform:uppercase
+    }
+
+    .layout-blog-article .article-categories {
+        display: flex;
+        flex-wrap: wrap;
+        margin:0 -1em
+    }
+
+    .layout-blog-article .article-categories .category-text {
+        color:#fbaf17
+    }
+
+    .layout-blog-article .article-excerpt {
+        margin-top:1rem
+    }
+
+    .layout-media-gallery {
+        background-color:#f0f0f0
+    }
+
+    .layout-media-gallery .column-1 {
+        flex:0 0 60%
+    }
+
+    @media screen and (max-width: 450px) {
+        .layout-media-gallery .column-1 {
+            flex:0 0 100%
+        }
+    }
+
+    .layout-media-gallery .column-2 {
+        flex:0 0 40%
+    }
+
+    @media screen and (max-width: 450px) {
+        .layout-media-gallery .column-2 {
+            flex:0 0 100%
+        }
+    }
+
+    .layout-media-gallery .column-container {
+        margin:0 -0.5em
+    }
+
+    .layout-media-gallery .column-inner {
+        display: flex;
+        flex-wrap: wrap;
+        padding: .5em;
+        margin:0 -0.5em
+    }
+
+    .layout-media-gallery .column-item {
+        flex:0 0 100%
+    }
+
+    .layout-media-gallery .column-item-2, .layout-media-gallery .column-item-3 {
+        flex:0 0 50%
+    }
+
+    @media screen and (max-width: 450px) {
+        .layout-media-gallery .column-item-4, .layout-media-gallery .column-item-5 {
+            flex:0 0 50%
+        }
+    }
+
+    .layout-media-gallery .column-item-2 .image-wrapper::before {
+        background-color:#05888e
+    }
+
+    .layout-media-gallery .column-item-3 .image-wrapper::before {
+        background-color:#3e3e3e
+    }
+
+    .layout-media-gallery .column-item-4 .image-wrapper::before {
+        background-color:#02813f
+    }
+
+    .layout-media-gallery .column-item-5 .image-wrapper::before {
+        background-color:#fbaf17
+    }
+
+    .layout-media-gallery .image-wrapper {
+        position: relative;
+        display:block
+    }
+
+    .layout-media-gallery .image-wrapper::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        transition:opacity 300ms
+    }
+
+    .layout-media-gallery .image-wrapper::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 4em;
+        height: 4em;
+        top: 1em;
+        right: 1em;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/media-plus.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transform-origin: center;
+        transform: scale(0.5);
+        transition:transform 300ms, opacity 300ms
+    }
+
+    .layout-media-gallery .image-wrapper:hover::before {
+        opacity:0
+    }
+
+    .layout-media-gallery .image-wrapper:hover::after {
+        opacity: 1;
+        transform:scale(1)
+    }
+
+    .layout-media-gallery .image-wrapper-item {
+        display:block
+    }
+
+    .layout-media-gallery .column-item-inner {
+        padding:.5em
+    }
+
+    .layout-media-gallery .bx-wrapper {
+        display:flex
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-media-gallery .bx-wrapper {
+            flex-wrap:wrap
+        }
+    }
+
+    .layout-media-gallery .bx-viewport {
+        flex: 0 0 100%;
+        max-width:calc(100% - 10em)
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-media-gallery .bx-viewport {
+            flex: 0 0 100%;
+            max-width:100%
+        }
+    }
+
+    .layout-media-gallery .bx-controls {
+        position: relative;
+        flex: 0 0 10em;
+        padding:1em 0
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-media-gallery .bx-controls {
+            flex:0 0 100%
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .layout-media-gallery .bx-controls-direction {
+            display: flex;
+            justify-content:space-between
+        }
+    }
+
+    .layout-csv-grid .width-container {
+        max-width: 1000px;
+        padding:0 10em
+    }
+
+    @media screen and (max-width: 1100px) {
+        .layout-csv-grid .width-container {
+            padding:0 6em
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .layout-csv-grid .width-container {
+            padding:0 2em
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .layout-csv-grid .width-container {
+            padding:0 1em
+        }
+    }
+
+    .layout-csv-grid .csv-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        border:1px solid #ddd
+    }
+
+    @media screen and (max-width: 550px) {
+        .layout-csv-grid .csv-wrapper {
+            grid-template-columns:1fr 1fr
+        }
+    }
+
+    .layout-csv-grid .item {
+        padding:1em
+    }
+
+    @media screen and (max-width: 550px) {
+        .layout-csv-grid .item:nth-child(3n + 1) {
+            grid-column:span 2
+        }
+    }
+
+    .layout-csv-grid .item:nth-of-type(6n + 5) {
+        background-color:#f1f1f1
+    }
+
+    .layout-csv-grid .item:nth-of-type(6n + 6) {
+        background-color:#f1f1f1
+    }
+
+    .layout-csv-grid .item:nth-of-type(6n + 4) {
+        background-color:#f1f1f1
+    }
+
+    html.remodal-is-locked {
+        overflow: hidden;
+        touch-action:none
+    }
+
+    .remodal, [data-remodal-id] {
+        display:none
+    }
+
+    .remodal-overlay {
+        position: fixed;
+        z-index: 9999;
+        top: -5000px;
+        right: -5000px;
+        bottom: -5000px;
+        left: -5000px;
+        display:none
+    }
+
+    .remodal-wrapper {
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        overflow: auto;
+        text-align: center;
+        -webkit-overflow-scrolling:touch
+    }
+
+    .remodal-wrapper:after {
+        display: inline-block;
+        height: 100%;
+        margin-left: -0.05em;
+        content: ""
+    }
+
+    .remodal-overlay, .remodal-wrapper {
+        -webkit-backface-visibility: hidden;
+        backface-visibility:hidden
+    }
+
+    .remodal {
+        position: relative;
+        outline: 0;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        text-size-adjust:100%
+    }
+
+    .remodal-is-initialized {
+        display:inline-block
+    }
+
+    .remodal-bg.remodal-is-opening, .remodal-bg.remodal-is-opened {
+        filter:blur(3px)
+    }
+
+    .remodal-overlay {
+        background:rgba(43, 46, 56, 0.9)
+    }
+
+    .remodal-overlay.remodal-is-opening, .remodal-overlay.remodal-is-closing {
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode:forwards
+    }
+
+    .remodal-overlay.remodal-is-opening {
+        -webkit-animation-name: remodal-overlay-opening-keyframes;
+        animation-name:remodal-overlay-opening-keyframes
+    }
+
+    .remodal-overlay.remodal-is-closing {
+        -webkit-animation-name: remodal-overlay-closing-keyframes;
+        animation-name:remodal-overlay-closing-keyframes
+    }
+
+    .remodal-wrapper {
+        padding:10px 10px 0
+    }
+
+    .remodal {
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 35px;
+        transform: translate3d(0, 0, 0);
+        color: #2b2e38;
+        background:#fff
+    }
+
+    .remodal.remodal-special {
+        padding: 0;
+        background:0
+    }
+
+    .remodal.remodal-is-opening, .remodal.remodal-is-closing {
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode:forwards
+    }
+
+    .remodal.remodal-is-opening {
+        -webkit-animation-name: remodal-opening-keyframes;
+        animation-name:remodal-opening-keyframes
+    }
+
+    .remodal.remodal-is-closing {
+        -webkit-animation-name: remodal-closing-keyframes;
+        animation-name:remodal-closing-keyframes
+    }
+
+    .remodal, .remodal-wrapper:after {
+        vertical-align:middle
+    }
+
+    .remodal-close {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        overflow: visible;
+        width: 35px;
+        height: 35px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        transition: color .2s;
+        text-decoration: none;
+        color: #95979c;
+        border: 0;
+        outline: 0;
+        background:transparent
+    }
+
+    .remodal-close:hover, .remodal-close:focus {
+        color:#2b2e38
+    }
+
+    .remodal-close:before {
+        font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+        font-size: 25px;
+        line-height: 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 35px;
+        content: "\00d7";
+        text-align:center
+    }
+
+    .remodal-confirm, .remodal-cancel {
+        font: inherit;
+        display: inline-block;
+        overflow: visible;
+        min-width: 110px;
+        margin: 0;
+        padding: 12px 0;
+        cursor: pointer;
+        transition: background .2s;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        border: 0;
+        outline:0
+    }
+
+    .remodal-confirm {
+        color: #fff;
+        background:#81c784
+    }
+
+    .remodal-confirm:hover, .remodal-confirm:focus {
+        background:#66bb6a
+    }
+
+    .remodal-cancel {
+        color: #fff;
+        background:#e57373
+    }
+
+    .remodal-cancel:hover, .remodal-cancel:focus {
+        background:#ef5350
+    }
+
+    .remodal-confirm::-moz-focus-inner, .remodal-cancel::-moz-focus-inner, .remodal-close::-moz-focus-inner {
+        padding: 0;
+        border:0
+    }
+
+    @-webkit-keyframes remodal-opening-keyframes {
+        from {
+            transform: scale(1.05);
+            opacity:0
+        }
+
+        to {
+            transform: none;
+            opacity: 1;
+            filter:blur(0)
+        }
+    }
+
+    @keyframes remodal-opening-keyframes {
+        from {
+            transform: scale(1.05);
+            opacity:0
+        }
+
+        to {
+            transform: none;
+            opacity: 1;
+            filter:blur(0)
+        }
+    }
+
+    @-webkit-keyframes remodal-closing-keyframes {
+        from {
+            transform: scale(1);
+            opacity:1
+        }
+
+        to {
+            transform: scale(0.95);
+            opacity: 0;
+            filter:blur(0)
+        }
+    }
+
+    @keyframes remodal-closing-keyframes {
+        from {
+            transform: scale(1);
+            opacity:1
+        }
+
+        to {
+            transform: scale(0.95);
+            opacity: 0;
+            filter:blur(0)
+        }
+    }
+
+    @-webkit-keyframes remodal-overlay-opening-keyframes {
+        from {
+            opacity:0
+        }
+
+        to {
+            opacity:1
+        }
+    }
+
+    @keyframes remodal-overlay-opening-keyframes {
+        from {
+            opacity:0
+        }
+
+        to {
+            opacity:1
+        }
+    }
+
+    @-webkit-keyframes remodal-overlay-closing-keyframes {
+        from {
+            opacity:1
+        }
+
+        to {
+            opacity:0
+        }
+    }
+
+    @keyframes remodal-overlay-closing-keyframes {
+        from {
+            opacity:1
+        }
+
+        to {
+            opacity:0
+        }
+    }
+
+    @media only screen and (min-width: 641px) {
+        .remodal {
+            max-width:600px
+        }
+    }
+
+    .lt-ie9 .remodal-overlay {
+        background:#2b2e38
+    }
+
+    .lt-ie9 .remodal {
+        width:600px
+    }
+
+    .layout-thank-you {
+        position: relative;
+        padding:0 !important
+    }
+
+    .layout-thank-you .width-container {
+        padding:0
+    }
+
+    .layout-thank-you::before {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 100%;
+        left: 50%;
+        width: 320px;
+        height: 346px;
+        margin-left: -160px;
+        background-size: contain;
+        transform:translateY(224px)
+    }
+
+    @media screen and (max-width: 545px) {
+        .layout-thank-you::before {
+            transform:translateY(68%)
+        }
+    }
+
+    .layout-thank-you .section-title {
+        padding: 10rem 1rem 0;
+        background-color: #333;
+        color: #fff;
+        line-height: 1;
+        font-size: 5em;
+        font-weight: 900;
+        text-transform: uppercase;
+        background-position: center;
+        background-size:cover
+    }
+
+    @media screen and (max-width: 480px) {
+        .layout-thank-you .section-title {
+            font-size:3em
+        }
+    }
+
+    .layout-thank-you .section-subtitle {
+        padding: 0 .5em;
+        margin: 1em auto;
+        color: #333;
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform:uppercase
+    }
+
+    .layout-thank-you .content-container {
+        padding: 0 .5em;
+        padding-bottom: 1em;
+        margin: 0 auto;
+        max-width:425px
+    }
+
+    .layout-thank-you .tel {
+        display: block;
+        margin: 1rem 0 2rem;
+        font-size: 1.5em;
+        font-weight: 700;
+        text-decoration:none
+    }
+
+    .layout-thank-you .cta-button {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition:color 325ms ease
+    }
+
+    .layout-thank-you .cta-button:hover {
+        color:rgba(255, 255, 255, 0.8)
+    }
+
+    .pagination-container {
+        width: 100%;
+        display: flex;
+        justify-content:center
+    }
+
+    .pagination-container .pagination {
+        display: flex;
+        align-items:center
+    }
+
+    .pagination-container .counter-display {
+        padding: 1em;
+        font-size: 1.4285em;
+        font-weight: 700;
+        line-height: 1.75;
+        letter-spacing: 2.4px;
+        text-align:center
+    }
+
+    .pagination-container .pagerItem1 {
+        border-bottom:2px solid #3e3e3e
+    }
+
+    .pagination-container .pager-list-item {
+        padding:.5em 1em
+    }
+
+    .pagination-container .next, .pagination-container .prev {
+        position:relative
+    }
+
+    .pagination-container .next .fa, .pagination-container .prev .fa {
+        opacity:0
+    }
+
+    .pagination-container .next .pager-list-link, .pagination-container .prev .pager-list-link {
+        position: relative;
+        display: block;
+        width: 3em;
+        height: 1.5em;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/arrow-right.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat:no-repeat
+    }
+
+    .pagination-container .next.disabled, .pagination-container .prev.disabled {
+        opacity: 0;
+        cursor:unset
+    }
+
+    .pagination-container .next.disabled .pager-list-link, .pagination-container .prev.disabled .pager-list-link {
+        cursor:unset
+    }
+
+    .pagination-container .prev .pager-list-link {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/arrow-left.svg')
+    }/*!
+     * Strip - An Unobtrusive Responsive Lightbox - v1.6.4
+     * (c) 2014-2016 Nick Stakenburg
+     *
+     * http://www.stripjs.com
+     *
+     * Licensing:
+     * - Commercial: http://www.stripjs.com/license
+     * - Non-commercial: http://creativecommons.org/licenses/by-nc-nd/3.0
+     */
+
+    .strp-window {
+        position: fixed;
+        width: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #292929;
+        font: 13px/20px "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, sans-serif
+    }
+
+    .strp-window.strp-vertical {
+        height: 0;
+        width:100%
+    }
+
+    .strp-window {
+        margin-left:40px
+    }
+
+    .strp-window.strp-vertical {
+        margin-left: 0;
+        margin-bottom:40px
+    }
+
+    @media all and (max-width: 414px) and(orientation: portrait), all and(max-width: 736px) and(max-height: 414px) {
+        .strp-window.strp-horizontal {
+            min-width:100%
+        }
+    }
+
+    @media all and (max-height: 414px) and(orientation: landscape), all and(max-height: 736px) and(max-width: 414px) {
+        .strp-window.strp-vertical {
+            min-height:100%
+        }
+    }
+
+    .strp-window, .strp-spinner-move {
+        z-index: 99999
+    }
+
+    .strp-window, .strp-window [class^='strp-'], .strp-spinner-move, .strp-spinner-move [class^='strp-'] {
+        box-sizing:border-box
+    }
+
+    .strp-window {
+        transform:translateZ(0px)
+    }
+
+    .strp-measured {
+        margin: 0 !important;
+        min-width: 0 !important;
+        min-height:0 !important
+    }
+
+    .strp-pages {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow:hidden
+    }
+
+    .strp-side-right {
+        top: 0;
+        right:0
+    }
+
+    .strp-side-right .strp-pages {
+        top: 0;
+        right:0
+    }
+
+    .strp-side-right .strp-page {
+        top: 0;
+        right:0
+    }
+
+    .strp-side-right .strp-close {
+        top: 0;
+        right:0
+    }
+
+    .strp-side-left {
+        top: 0;
+        left:0
+    }
+
+    .strp-side-left .strp-pages {
+        top: 0;
+        left:0
+    }
+
+    .strp-side-left .strp-page {
+        top: 0;
+        left:0
+    }
+
+    .strp-side-left .strp-close {
+        top: 0;
+        right:0
+    }
+
+    .strp-side-top {
+        top: 0;
+        left:0
+    }
+
+    .strp-side-top .strp-pages {
+        top: 0;
+        left:0
+    }
+
+    .strp-side-top .strp-page {
+        top: 0;
+        left:0
+    }
+
+    .strp-side-top .strp-close {
+        top: 0;
+        right:0
+    }
+
+    .strp-side-bottom {
+        bottom: 0;
+        left:0
+    }
+
+    .strp-side-bottom .strp-pages {
+        bottom: 0;
+        left:0
+    }
+
+    .strp-side-bottom .strp-page {
+        bottom: 0;
+        left:0
+    }
+
+    .strp-side-bottom .strp-close {
+        top: 0;
+        right:0
+    }
+
+    .strp-page {
+        position: absolute;
+        width: 100%;
+        height:100%
+    }
+
+    .strp-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: #292929;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select:none
+    }
+
+    .strp-no-overlap .strp-container {
+        padding:48px 72px
+    }
+
+    .strp-no-overlap.strp-no-sides .strp-container {
+        padding:48px 0
+    }
+
+    .strp-vertical .strp-no-overlap .strp-container {
+        padding:0 72px
+    }
+
+    .strp-vertical .strp-no-overlap.strp-no-sides .strp-container {
+        padding:0 48px
+    }
+
+    .strp-hovering-clickable .strp-container {
+        cursor:pointer
+    }
+
+    .strp-content-element {
+        position: absolute;
+        top: 50%;
+        left:50%
+    }
+
+    .strp-content-element iframe {
+        float: left;
+        width: 100%;
+        height:100%
+    }
+
+    .strp-container img {
+        display: inline-block;
+        vertical-align:middle
+    }
+
+    .strp-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: #efefef;
+        font-size: 13px;
+        line-height: 20px;
+        background: #000;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        text-size-adjust:none
+    }
+
+    .strp-info-padder {
+        display: block;
+        overflow: hidden;
+        padding: 12px;
+        position: relative;
+        width:auto
+    }
+
+    .strp-caption {
+        width: auto;
+        display: inline;
+        white-space:normal
+    }
+
+    .strp-position {
+        color: #b3b3b3;
+        float: right;
+        line-height: 21px;
+        opacity: .99;
+        position: relative;
+        text-align: right;
+        margin-left: 15px;
+        white-space:nowrap
+    }
+
+    .strp-info a, .strp-info a:hover {
+        color: #ccc;
+        border: 0;
+        background: 0;
+        text-decoration:underline
+    }
+
+    .strp-info a:hover {
+        color:#eee
+    }
+
+    .strp-nav {
+        position: absolute;
+        top: 50%;
+        width: 54px;
+        height: 72px;
+        margin: 0 9px;
+        margin-top: -36px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select:none
+    }
+
+    .strp-nav-previous {
+        left:0
+    }
+
+    .strp-nav-next {
+        right: 0;
+        left:auto
+    }
+
+    .strp-nav-disabled {
+        cursor:default
+    }
+
+    .strp-nav-button {
+        float: left;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding:0
+    }
+
+    .strp-nav-button-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:#101010
+    }
+
+    .strp-nav-button-icon {
+        float: left;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        zoom: 1;
+        background-position: 50% 50%;
+        background-repeat:no-repeat
+    }
+
+    .strp-close {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select:none
+    }
+
+    .strp-close-background, .strp-close-icon {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        height: 26px;
+        width: 26px;
+        background-position: 50% 50%;
+        background-repeat:no-repeat
+    }
+
+    .strp-close-background {
+        filter: alpha(opacity=80);
+        opacity: .8;
+        background-color:#101010
+    }
+
+    .strp-close:hover .strp-close-background {
+        background-color:#161616
+    }
+
+    .strp-has-error .strp-container {
+        background-color:#ca3434
+    }
+
+    .strp-error {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 240px;
+        height: 240px;
+        margin-left: -120px;
+        margin-top: -120px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/error.svg')
+    }
+
+    .strp-no-svg .strp-error {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/error.png')
+    }
+
+    .strp-spinner-move {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 48px;
+        width: 0;
+        overflow:visible !important
+    }
+
+    .strp-spinner-move.strp-vertical {
+        width: 48px;
+        height:0
+    }
+
+    .strp-spinner {
+        width: 48px;
+        height: 48px;
+        float: left;
+        position:relative
+    }
+
+    .strp-spinner-move.strp-side-top {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left:auto
+    }
+
+    .strp-spinner-move.strp-side-bottom {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left:auto
+    }
+
+    .strp-spinner-move.strp-side-right .strp-spinner {
+        margin-left:-48px
+    }
+
+    .strp-spinner-move.strp-side-left .strp-spinner {
+        margin-right: -48px;
+        float:right
+    }
+
+    .strp-spinner-move.strp-side-bottom .strp-spinner {
+        margin-top:-48px
+    }
+
+    .strp-spinner-move.strp-side-top .strp-spinner {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom:-48px
+    }
+
+    @-webkit-keyframes strp-spinner-spin {
+        100% {
+            -webkit-transform:rotate(360deg)
+        }
+    }
+
+    @keyframes strp-spinner-spin {
+        100% {
+            transform:rotate(360deg)
+        }
+    }
+
+    .strp-spinner-rotate, .strp-spinner-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%
+    }
+
+    .strp-spinner-line {
+        position: absolute;
+        left: 50%;
+        top: 15px;
+        width: 2px;
+        margin-left: -1px;
+        height: 3px;
+        border-radius: 1px;
+        z-index: 80;
+        color:inherit
+    }
+
+    .strp-window-skin-strip .strp-nav-button-background {
+        background-color:transparent
+    }
+
+    .strp-window-skin-strip .strp-nav-previous .strp-nav-button-icon {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/previous.svg')
+    }
+
+    .strp-window-skin-strip .strp-nav-next .strp-nav-button-icon {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/next.svg')
+    }
+
+    .strp-window-skin-strip.strp-no-svg .strp-nav-previous .strp-nav-button-icon {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/previous-faded.png');
+        opacity:1
+    }
+
+    .strp-window-skin-strip.strp-no-svg .strp-nav-next .strp-nav-button-icon {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/next-faded.png');
+        opacity:1
+    }
+
+    .strp-window-skin-strip .strp-nav .strp-nav-button-icon {
+        opacity:.6
+    }
+
+    .strp-window-skin-strip.strp-mobile-touch .strp-nav .strp-nav-button-icon {
+        opacity:1
+    }
+
+    .strp-window-skin-strip .strp-nav:hover .strp-nav-button-icon, .strp-window-skin-strip .strp-nav-hover .strp-nav-button-icon {
+        opacity:1
+    }
+
+    .strp-window-skin-strip.strp-no-svg .strp-nav.strp-nav-previous:hover .strp-nav-button-icon, .strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-previous .strp-nav-button-icon {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/previous.png')
+    }
+
+    .strp-window-skin-strip.strp-no-svg .strp-nav.strp-nav-next:hover .strp-nav-button-icon, .strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-next .strp-nav-button-icon {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/next.png')
+    }
+
+    @media all and (max-width: 375px) and(orientation: portrait), all and(max-height: 375px) and(max-width: 667px) {
+        .strp-window-skin-strip .strp-nav {
+            width: 48px;
+            height: 60px;
+            margin: 0 5px;
+            margin-top:-30px
+        }
+
+        .strp-window-skin-strip .strp-nav-previous .strp-nav-button-icon {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/previous-small.svg')
+        }
+
+        .strp-window-skin-strip .strp-nav-next .strp-nav-button-icon {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/next-small.svg')
+        }
+
+        .strp-window-skin-strip.strp-no-svg .strp-nav-previous .strp-nav-button-icon {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/previous-small-faded.png')
+        }
+
+        .strp-window-skin-strip.strp-no-svg .strp-nav-next .strp-nav-button-icon {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/next-small-faded.png')
+        }
+
+        .strp-window-skin-strip.strp-no-svg .strp-nav.strp-nav-previous:hover .strp-nav-button-icon, .strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-previous .strp-nav-button-icon {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/previous-small.png')
+        }
+
+        .strp-window-skin-strip.strp-no-svg .strp-nav.strp-nav-next:hover .strp-nav-button-icon, .strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-next .strp-nav-button-icon {
+            background-image: url('https://octanecdn.com/findlayroofingcom/images/next-small.png')
+        }
+
+        .strp-no-overlap .strp-container {
+            padding:48px 58px
+        }
+
+        .strp-no-overlap.strp-no-sides .strp-container {
+            padding:48px 0
+        }
+
+        .strp-vertical .strp-no-overlap .strp-container {
+            padding:0 58px
+        }
+
+        .strp-vertical .strp-no-overlap.strp-no-sides .strp-container {
+            padding:0 48px
+        }
+    }
+
+    .strp-window-skin-strip .strp-close .strp-close-icon {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/svg/close.svg');
+        opacity:.8
+    }
+
+    .strp-window-skin-strip .strp-close:hover .strp-close-icon {
+        opacity:1
+    }
+
+    .strp-window-skin-strip.strp-mobile-touch .strp-close .strp-close-icon, .strp-window-skin-strip.strp-mobile-touch .strp-close:hover .strp-close-icon {
+        opacity:1
+    }
+
+    .strp-window-skin-strip.strp-no-svg .strp-close .strp-close-icon {
+        background-image: url('https://octanecdn.com/findlayroofingcom/images/close.png');
+        opacity: 1
+    }
+    
+    
+   * {
+  box-sizing: border-box;
+}
+
+.column-bruh {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    
+    
+   * {
+  box-sizing: border-box;
+}
+
+.column-bruh {
+  float: left;
+  width: 25%;
+  padding-left: 50px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+   * {
+  box-sizing: border-box;
+}
+
+.column-award {
+  float: left;
+  width: 33%;
+  padding: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+
+}
+    </style>
+    <style id="layoutStyler">
+    </style>
+    <script>
+    !function(e) {
+        "use strict";
+        var n = function(n, t, o, i) {
+            function r(e) {
+                return l.body ? e() : void setTimeout(function() {
+                    r(e)
+                })
+            }
+            function d() {
+                s.addEventListener && s.removeEventListener("load", d), s.media = i || "all"
+            }
+            var a,
+                l = e.document,
+                s = l.createElement("link");
+            if (o)
+                a = o;
+            else {
+                var f = (l.body || l.getElementsByTagName("head")[0]).childNodes;
+                a = f[f.length - 1]
+            }
+            t && (s.className = t);
+            var u = l.styleSheets;
+            s.rel = "stylesheet", s.href = n, s.media = "only x", r(function() {
+                a.parentNode.insertBefore(s, o ? a : a.nextSibling)
+            });
+            var c = function(e) {
+                for (var n = s.href, t = u.length; t--;)
+                    if (u[t].href === n)
+                        return e();
+                setTimeout(function() {
+                    c(e)
+                })
+            };
+            return s.addEventListener && s.addEventListener("load", d), s.onloadcssdefined = c, c(d), s
+        };
+        "undefined" != typeof exports ? exports.loadCSS = n : e.loadCSS = n
+    }("undefined" != typeof global ? global : this);
+    loadCSS('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', 'font-awesome');
+
+    loadCSS('//fonts.googleapis.com/css?family=Montserrat:300,400,700,900|Work+Sans:300,400,700,900');
+    </script>
+
+    <style id="layoutStyler">
+
+</style>
+<script>
+  !function(e){"use strict";var n=function(n,t,o,i){function r(e){return l.body?e():void setTimeout(function(){r(e)})}function d(){s.addEventListener&&s.removeEventListener("load",d),s.media=i||"all"}var a,l=e.document,s=l.createElement("link");if(o)a=o;else{var f=(l.body||l.getElementsByTagName("head")[0]).childNodes;a=f[f.length-1]}t&&(s.className=t);var u=l.styleSheets;s.rel="stylesheet",s.href=n,s.media="only x",r(function(){a.parentNode.insertBefore(s,o?a:a.nextSibling)});var c=function(e){for(var n=s.href,t=u.length;t--;)if(u[t].href===n)return e();setTimeout(function(){c(e)})};return s.addEventListener&&s.addEventListener("load",d),s.onloadcssdefined=c,c(d),s};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+  	loadCSS('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', 'font-awesome');
+	
+	loadCSS('//fonts.googleapis.com/css?family=Montserrat:300,400,700,900|Work+Sans:300,400,700,900');
+	
+</script>
+ <title>Precision Roofing | Slating and Tiling</title>
+    <meta name="description" content="Since 2018, Precision Roofing has been repairing and replacing roofs in the Atlanta area with exceptional service and pinpoint attention-to-detail."/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="preconnect" href="https://transform.octanecdn.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    
+    <meta property="og:url" content="https://www.findlayroofing.com"/>
+    <meta property="og:title" content="Atlanta Roof Repair & Replacement Company"/>
+    <meta property="og:description" content="Since 1995, Findlay Roofing (Roof Roof) has been repairing and replacing roofs in the Atlanta area with exceptional service and pinpoint attention-to-detail."/>
+    <meta property="og:site_name" content="Findlay Roofing"/>
+    
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="article"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:description" content="Since 1995, Findlay Roofing (Roof Roof) has been repairing and replacing roofs in the Atlanta area with exceptional service and pinpoint attention-to-detail."/>
+    <meta name="twitter:title" content="Findlay Roofing"/>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="canonical" href="https://www.findlayroofing.com">
+
+    <script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+            new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W58HCS2');
+    </script>
+    <script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+            new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-53VWJHQ');
+    </script>
+</head>
+<body>
+    <div id="wrapper" itemscope itemtype="http://schema.org/LocalBusiness" class="page_1" data-page="166996">
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W58HCS2" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53VWJHQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+          <div class="nav-drawer header-2-row-mobile" data-style-sitewide="true">
+            <nav class="navigation">
+                <ul class="nav-list-primary">
+                    <li class="nav-item-primary active nav-item-1 ">
+                        <a class="nav-link-primary active" href="https://Precision-Roofing-Home.nilanpatel20.repl.co">
+                            <p class="link-text">
+                            Home </p>
+                        </a>
+                    </li>
+                    <li class="nav-item-primary  nav-item-2 ">
+                        <a class="nav-link-primary " href="https://Roof-Replacement.nilanpatel20.repl.co">
+                            <p class="link-text">
+                            Roof Replacement </p>
+                        </a>
+                    </li>
+                    <li class="nav-item-primary  nav-item-3 ">
+                        <a class="nav-link-primary " href="">
+                            <p class="link-text">
+                            Services </p>
+                        </a>
+                        <div class="nav-list-secondary-container">
+                            <ul class="nav-list-secondary">
+                                <li class="nav-item-secondary ">
+                                    <a class="nav-link-secondary " href="https://Roof-Replacement.nilanpatel20.repl.co">
+                                        <p class="link-text">
+                                        Roof Replacement </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item-secondary ">
+                                    <a class="nav-link-secondary " href="https://Roof-Repair.nilanpatel20.repl.co">
+                                        <p class="link-text">
+                                        Roof Repairs </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item-secondary ">
+                                    <a class="nav-link-secondary " href="https://Gutter-and-Fascia.nilanpatel20.repl.co">
+                                        <p class="link-text">
+                                        Gutter and Fascia Installation </p>
+                                    </a>
+                                </li>
+                                
+                                <li class="nav-item-secondary ">
+                                    <a class="nav-link-secondary " href="https://Slating-and-Tiling.nilanpatel20.repl.co">
+                                        <p class="link-text">
+                                        Slating and Tiling </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                 
+                    <li class="nav-item-primary  nav-item-4 pos-left">
+                        <a class="nav-link-primary " href="https://About-Us.nilanpatel20.repl.co">
+                            <p class="link-text">
+                            About Us </p>
+                        </a>
+                        
+                                </li>
+                        
+               
+                    <li class="nav-item-primary  nav-item-6 ">
+                        <a class="nav-link-primary " href="https://Testimonials.nilanpatel20.repl.co">
+                            <p class="link-text">
+                            Testimonials </p>
+                        </a>
+                    </li>
+                    <li class="nav-item-primary  nav-item-7 ">
+                        <a class="nav-link-primary " href="https://Contact-Us.nilanpatel20.repl.co">
+                            <p class="link-text">
+                            Contact US </p>
+                        </a>
+                       
+                    </li>
+                    <li class="nav-item-primary nav-item-8 nav-tel">
+                                    <a href="tel:7705427546" class="nav-link-primary">
+                                        <p class="link-text">770.542.7546</p>
+                                    </a>
+                                </li>
+                </ul>
+                <ul class="nav-list-primary">
+                    <li class="nav-item-primary">
+                        <a class="top-item" href="/500-coupon">
+                            <div class="top-inner">
+                                <p class="top-text">
+                                    
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="page-wrapper">
+            <span class="nav-overlay" data-style-sitewide="true"></span>
+            <header id="header" class="header header-2-row site-header " data-page="166996" data-style-sitewide="true">
+                <div class="width-container">
+                    <div class="top-col">
+                        <div class="logo-col">
+                            <p class="logo">
+                                <a class="logo-link" href="/">
+                                    <img src="logo.roof.jpg" srcset="logo.roof.jpg 2x" alt="Precision Roofing" class="logo-image"/>
+                                </a>
+                            </p>
+                            <div class="sr-only">
+                                <link itemprop="url" href="https://www.findlayroofing.com/">
+                                <link itemprop="sameAs" href="https://www.google.com/search?q=Findlay+Roofing&ludocid=10858808998778510123&lsig=AB86z5X060LGO3UTe1-nXcRUIjqV">
+                                <link itemprop="image" href="https://dynamix-cdn.s3.amazonaws.com/findlayroofingcom/findlayroofingcom_323663596.png">
+                                <link itemprop="telephone" href="4708484240">
+                                <span class="sr-only" itemprop="name">Precision Roofing</span>
+                                <span class="sr-only" itemprop="address"></span>
+                                <span class="sr-only" itemprop="priceRange">Varied</span>
+                            </div>
+                        </div>
+                        <div class="top-navigation">
+                            <a class="top-item" href="/500-coupon">
+                                <div class="top-inner">
+                                    <p class="top-text">
+                                        <strong> Contact Us For a 
+                                          </br>  Free Quote Today
+                                         </strong>
+                                         
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                        
+                    <div class="nav-col">
+                        <nav class="navigation">
+                            <ul class="nav-list-primary">
+                                <li class="nav-item-primary active nav-item-1 ">
+                                    <a class="nav-link-primary active" href="https://Precision-Roofing-Home.nilanpatel20.repl.co">
+                                        <p class="link-text">
+                                        Home </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item-primary  nav-item-2 ">
+                                    <a class="nav-link-primary " href="https://Roof-Replacement.nilanpatel20.repl.co">
+                                        <p class="link-text">
+                                        Roof Replacement </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item-primary  nav-item-3 ">
+                                    <a class="nav-link-primary " href="">
+                                        <p class="link-text">
+                                        Services </p>
+                                    </a>
+                                    <div class="nav-list-secondary-container">
+                                        <ul class="nav-list-secondary">
+                                            <li class="nav-item-secondary ">
+                                                <a class="nav-link-secondary " href="https://Roof-Replacement.nilanpatel20.repl.co">
+                                                    <p class="link-text">
+                                                    Roof Replacement </p>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item-secondary ">
+                                                <a class="nav-link-secondary " href="https://Roof-Repair.nilanpatel20.repl.co">
+                                                    <p class="link-text">
+                                                    Roof Repairs </p>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item-secondary ">
+                                                <a class="nav-link-secondary " href="https://Gutter-and-Fascia.nilanpatel20.repl.co">
+                                                    <p class="link-text">
+                                                    Gutter and Fascia Installation </p>
+                                                </a>
+                                            </li>
+                                            
+                         
+                                            <li class="nav-item-secondary ">
+                                                <a class="nav-link-secondary " href="https://Slating-and-Tiling.nilanpatel20.repl.co">
+                                                    <p class="link-text">
+                                                    Slating and Tiling </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                          
+                                 <li class="nav-item-primary  nav-item-4 pos-left">
+                        <a class="nav-link-primary " href="https://About-Us.nilanpatel20.repl.co">
+                            <p class="link-text">
+                            About Us </p>
+                        </a>
+                        
+                                </li>
+                                <li class="nav-item-primary  nav-item-6 ">
+                                    <a class="nav-link-primary " href="https://Testimonials.nilanpatel20.repl.co">
+                                        <p class="link-text">
+                                        Testimonials </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item-primary  nav-item-7 ">
+                                    <a class="nav-link-primary " href="https://Contact-Us.nilanpatel20.repl.co">
+                                        <p class="link-text">
+                                        Contact US </p>
+                                    </a>
+                                    
+                                            
+                                </li>
+                                <li class="nav-item-primary nav-item-8 nav-tel">
+                                    <a href="tel:7705427546" class="nav-link-primary">
+                                        <p class="link-text">770.542.7546</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <span class="nav-handle">
+                            <span class="nav-handle-inner"></span>
+                        </span>
+                    </div>
+                </div>
+            </header>
+<div class="nav-col">
+<nav class="navigation">
+<ul class="nav-list-primary">
+<li class="nav-item-primary active nav-item-1 ">
+           
+         
+
+                    <div class="main-content-wrapper">
+                <div class="cards ">
+                    <section class="layout-hero">
+                        <div class="slider-wrapper">
+                            <div class="slide-wrapper" style="background-image: url('slateRoof.jpg');">
+                                <div class="width-container">
+                                    <div class="inner-wrapper">
+                                       
+                            <h1 class="section-title">Slating and Tiling</h1>
+
+                    </section> 
+
+</br>
+</br>
+</br>
+                  
+<section class="layout-media-gallery">
+<div class="width-container">
+<h3 class="section-subtitle">Slate Tile Roof  Projects</h3>
+<div class="gallery-wrapper">
+<div class="slider-wrapper">
+<div class="slide-wrapper">
+<div class="column-container">
+<div class="column column-1">
+<div class="column-inner">
+<div class="column-item column-item-1">
+<div class="column-item-inner">
+<a href="slate2.jpg" data-strip-group="group1" data-strip-group-options="side: 'bottom', maxWidth: 1400" class="image-wrapper strip">
+<img src="slate2.jpg" srcset="slate2.jpg 1x, slate2.jpg 2x" alt="Gallery image" class="image-wrapper-item" />
+</a>
+</div>
+</div>
+<div class="column-item column-item-2">
+<div class="column-item-inner">
+<a href="slate1.jpg" data-strip-group="group1" data-strip-group-options="side: 'bottom', maxWidth: 1400" class="image-wrapper strip">
+<img src="slate1.jpg" srcset="slate2.jpg 1x, slate1.jpg 2x" alt="Gallery image" class="image-wrapper-item" />
+</a>
+</div>
+</div>
+<div class="column-item column-item-3">
+<div class="column-item-inner">
+<a href="slate3.jpg" data-strip-group="group1" data-strip-group-options="side: 'bottom', maxWidth: 1400" class="image-wrapper strip">
+<img src="slate3.jpg" srcset="slate3.jpg 1x, slate3.jpg 2x" alt="Gallery image" class="image-wrapper-item" />
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="column column-2">
+<div class="column-inner">
+<div class="column-item column-item-4">
+<div class="column-item-inner">
+<a href="slate4.jpg" data-strip-group="group1" data-strip-group-options="side: 'bottom', maxWidth: 1400" class="image-wrapper strip">
+<img src="slate4.jpg" srcset="slate4.jpg 1x, slate4.jpg 2x" alt="Gallery image" class="image-wrapper-item" />
+</a>
+</div>
+</div>
+<div class="column-item column-item-5">
+<div class="column-item-inner">
+<a href="slate6.jpg" data-strip-group="group1" data-strip-group-options="side: 'bottom', maxWidth: 1400" class="image-wrapper strip">
+<img src="slate6.jpg" srcset="slate6.jpg 1x, slate6.jpg 2x" alt="Gallery image" class="image-wrapper-item" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-wrapper">
+<div class="column-container">
+<div class="column column-1">
+<div class="column-inner">
+<div class="column-item column-item-1">
+<div class="column-item-inner">
+<a href="slate12.jpg" data-strip-group="group1" data-strip-group-options="side: 'bottom', maxWidth: 1400" class="image-wrapper strip">
+<img src="slate12.jpg" srcset="slate12.jpg 1x, slate12.jpg 2x" alt="Gallery image" class="image-wrapper-item" />
+</a>
+</div>
+</div>
+<div class="column-item column-item-2">
+<div class="column-item-inner">
+<a href="slate7.jpg" data-strip-group="group1" data-strip-group-options="side: 'bottom', maxWidth: 1400" class="image-wrapper strip">
+<img src="slate7.jpg" srcset="slate7.jpg 1x, slate7.jpg" alt="Gallery image" class="image-wrapper-item" />
+</a>
+</div>
+</div>
+<div class="column-item column-item-3">
+<div class="column-item-inner">
+<a href="slate10.jpg" data-strip-group="group1" data-strip-group-options="side: 'bottom', maxWidth: 1400" class="image-wrapper strip">
+<img src="slate10.jpg" srcset="slate10.jpg 1x, slate10.jpg 2x" alt="Gallery image" class="image-wrapper-item" />
+</a>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+                    <section class="layout-full-content">
+                      
+                        <div class="width-container">
+                 
+                            <h2 class="section-title">
+                                What is a Slate Tile Roof? 
+                                
+                            </h2>
+                            <div class="content-container">
+                                <p>Slate roof tiles are made of metamorphic rocks which are derived from sedimentary rock of volcanic ash and clay. ... Slate is a long lasting product depending on the quarry. Known as the hundred year old roof, slate roof tiles are durable, fireproof, waterproof and no two pieces are alike because it's a natural product.</p>
+                            </div>
+                            <div class="btn-wrapper">
+                                <a href="https://www.homeadvisor.com/r/benefits-of-slate-roofing-tiles/" class="btn">Learn More!</a>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="layout-two-columns">
+                     <center> <h2 class="section-title"> What is the difference? </h2> </center>
+                        <div class="width-container">
+                            <div class="column-container">
+                                <div class="column column-1">
+                                    <div class="column-inner">
+                                        <div class="content-container">
+                                            <h3 class="column-title">Slate Tile Roof</h3>
+                                            <p>We’ll offer the best gutter installation options for you, along with reasonable prices, so you can make the right choices. </p>
+                                            <ul class="column-list-items">
+                                                <li class="content-list-item">
+                                                    <p class="list-text">Are copper or aluminum gutters best for my home?</p>
+                                                </li>
+                                                <li class="content-list-item">
+                                                    <p class="list-text">What is the benefit to upgrading to a 6” gutter?</p>
+                                                </li>
+                                                <li class="content-list-item">
+                                                    <p class="list-text">Which type of gutter covers are most suitable for me?</p>
+                                                </li>
+                                                <li class="content-list-item">
+                                                    <p class="list-text">Should my gutters be round or rectangular form?</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column column-2">
+                                    <div class="column-inner">
+                                        <div class="content-container">
+                                            <h3 class="column-title">Standard Roof</h3>
+                                             <p>We’ll offer the best gutter installation options for you, along with reasonable prices, so you can make the right choices. </p>
+                                            
+                                            <ul class="column-list-items">
+                                                <li class="content-list-item">
+                                                  
+                                                    <p class="list-text">Are copper or aluminum gutters best for my home?</p>
+                                                </li>
+                                                <li class="content-list-item">
+                                                    <p class="list-text">What is the benefit to upgrading to a 6” gutter?</p>
+                                                </li>
+                                                <li class="content-list-item">
+                                                    <p class="list-text">Which type of gutter covers are most suitable for me?</p>
+                                                </li>
+                                                <li class="content-list-item">
+                                                    <p class="list-text">Should my gutters be round or rectangular form?</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="layout-testimonials">
+                      
+<div class="width-container">
+<h3 class="section-subtitle text-center">Testimonials</h3>
+<h2 class="section-title text-center">Hear Testominals from clients we have worked with</h2>
+<div class="slider-wrapper">
+<div class="slide-wrapper">
+<div class="column-container">
+<div class="column">
+<div class="column-inner">
+<div class="testimonial-wrapper">
+<div class="testimonial-inner small-quote">
+<p class="testimonial-content">Precision roofing made my claim so easy! My roof looks great, definitely recommend!</p>
+<p class="testimonial-attribution source-google">- Ben W</p>
+</div>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="column-inner">
+<div class="testimonial-wrapper">
+<div class="testimonial-inner small-quote">
+<p class="testimonial-content">Austin was so nice and accommodating and made sure everything went as smoothly as possible during our entire roof project. Highly recommend.</p>
+<p class="testimonial-attribution source-google">- Lindsay B </p>
+</div>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="column-inner">
+<div class="testimonial-wrapper">
+<div class="testimonial-inner small-quote">
+<p class="testimonial-content">Great customer service! Quick and easy roof replacement. Definitely recommend!</p>
+<p class="testimonial-attribution source-google">- Ali K</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-wrapper">
+<div class="column-container">
+<div class="column">
+<div class="column-inner">
+<div class="testimonial-wrapper">
+<div class="testimonial-inner small-quote">
+<p class="testimonial-content">This company helped us with filing a claim with my insurance company taking the hassle of trying to convince them of my roof damage.  Received a high quality replacement roof with a lifetime warranty.  Couldn't be more pleased!</p>
+<p class="testimonial-attribution source-google">- Dave Q</p>
+</div>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="column-inner">
+<div class="testimonial-wrapper">
+<div class="testimonial-inner small-quote">
+<p class="testimonial-content">They did an awesome Job , It has been 18 months since they installed the roof on and I have had zero issues. Austin is Super friendly and easy to work with!! Quality service! </p>
+<p class="testimonial-attribution source-google">- Aidan B</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></div>
+</div>
+                                          
+             <footer id="footer" class="footer" data-style-sitewide="true">
+                <div class="width-container">
+                    <div class="copyright-col">
+                         <h3 class="section-subtitle">Services Offered</h3>
+                      
+
+                            <a href="https://roof-replacement.nilanpatel20.repl.co/" class="service-link description-wrapper">
+                             <p class="copyright">
+                            Roof Replacement
+                                        </a>
+                            
+                        </p>
+
+                          <a href="https://roof-repair.nilanpatel20.repl.co/" class="service-link description-wrapper">
+                             <p class="copyright">
+                            Roof Repair
+                                        </a>
+                            
+                        </p>
+
+                        <a href="https://gutter-and-fascia.nilanpatel20.repl.co/" class="service-link description-wrapper">
+                             <p class="copyright">
+                            Gutter and Fascia
+                                        </a>
+                            
+                        </p>
+
+                         <a href="https://slating-and-tiling.nilanpatel20.repl.co/" class="service-link description-wrapper">
+                             <p class="copyright">
+                            Slating and Tiling
+                                        </a>
+                            
+                        </p>
+                    </div>
+
+                    <div class="copyright-col">
+                      <h3 class="section-subtitle">Connect With Us</h3>
+                        <p class="copyright">
+                            sales@precisionroofingga.com
+                            
+                        </p>
+                       <p class="copyright">
+                         <a href="tel:7705427546" class="nav-link-primary">
+                            770-542-7546
+                          </a>
+
+                            
+                        </p>
+
+                        <a href="https://contact-us.nilanpatel20.repl.co/" class="service-link description-wrapper">
+                             <p class="copyright">
+                            Contact Us Form
+                                        </a>
+
+                        <p class="copyright">
+                            Nilan Patel Web Design
+                            
+                        </p>
+                    </div>
+                   
+                       <div class="width-container">
+                    </div>
+                    <div class="copyright-col">
+                       <p class="logo">
+                                <a class="logo-link" href="/">
+                                    <img src="logo.roof.jpg" srcset="logo.roof.jpg 2x" alt="Precision Roofing" class="logo-image"/>
+                                </a>
+                            </p>
+                    </div>
+
+                    
+                    
+           
+                       
+
+                    
+                </div>
+            </footer>
+        </div>
+          <script type="text/javascript" src="//dynamix-cdn.s3.amazonaws.com/findlayroofingcom/js/jquery.min.js" defer></script>
+        <script type="text/javascript" src="//dynamix-cdn.s3.amazonaws.com/findlayroofingcom/js/plugins.min.js" defer></script>
+        <script type="text/javascript" src="//dynamix-cdn.s3.amazonaws.com/findlayroofingcom/js/layouts.min.js" defer></script>
+        <script type="text/javascript" src="//dynamix-cdn.s3.amazonaws.com/findlayroofingcom/js/main.min.js" defer></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&render=explicit" defer></script>
+        
+       
+    </div>
+</body>
+</html>
